@@ -382,7 +382,7 @@ img {
 
 #contact-a .text-fields {
   display: grid;
-  grid-template-areas: "fullname email" "subject phone" "message message";
+  grid-template-areas: "fullname email" "subject phone" "message message" "recaptcha recaptcha";
   grid-gap: 1.2rem;
   padding: 1rem;
   margin-bottom: 1.2rem;
@@ -408,6 +408,7 @@ img {
   #contact-a .text-fields .text-input {
     padding: 0.5rem 1rem; }
   #contact-a .text-fields .recaptcha {
+    grid-area: recaptcha;
     margin: 0 auto; }
 
 #contact-a button[type="submit"] {

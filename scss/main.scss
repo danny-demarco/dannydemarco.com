@@ -389,7 +389,8 @@ img {
       grid-template-areas:
         "fullname email"
         "subject phone"
-        "message message";
+        "message message"
+        "recaptcha recaptcha";
       grid-gap: 1.2rem;
       padding: 1rem;
       margin-bottom: 1.2rem;
@@ -423,6 +424,7 @@ img {
         padding: 0.5rem 1rem;
       }
       .recaptcha {
+        grid-area: recaptcha;
         margin: 0 auto;
       }
     }
