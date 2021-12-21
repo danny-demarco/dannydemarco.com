@@ -47,7 +47,7 @@ img {
   color: #fff;
 
   div {
-    margin: 0.5rem 0.3rem;
+    margin: auto 0.3rem;
 
     &:hover {
       color: $main-color;
@@ -92,6 +92,8 @@ img {
 #header {
   &-home {
     grid-area: header-nav;
+    background: $bg-color;
+    width: 100%;
     color: #fff;
     border-bottom: 5px solid $medium-color;
   }

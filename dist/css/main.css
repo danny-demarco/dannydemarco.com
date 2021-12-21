@@ -164,7 +164,7 @@ img {
   height: 70px;
   color: #fff; }
   #logo div {
-    margin: 0.5rem 0.3rem; }
+    margin: auto 0.3rem; }
     #logo div:hover {
       color: #1fbbd6;
       cursor: pointer;
@@ -193,6 +193,8 @@ img {
 
 #header-home {
   grid-area: header-nav;
+  background: #000;
+  width: 100%;
   color: #fff;
   border-bottom: 5px solid silver; }
 
@@ -464,8 +466,8 @@ img {
   #main-nav li {
     padding: 1rem 0.3rem; }
   #main-grid #header-content .header-content {
-    grid-template-columns: 1fr minmax(500px, 500px) 1fr;
-    grid-template-rows: 0.2fr 0.1fr minmax(500px, 500px) 0.75fr; }
+    grid-template-columns: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto);
+    grid-template-rows: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto) minmax(auto, auto); }
   #about-grid #about-a .about-info .bio p {
     font-size: x-small; }
   #projects-a .item-text-title {
