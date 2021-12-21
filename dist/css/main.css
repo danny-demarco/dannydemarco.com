@@ -407,6 +407,8 @@ img {
     border-radius: 5px; }
   #contact-a .text-fields .text-input {
     padding: 0.5rem 1rem; }
+  #contact-a .text-fields .recaptcha {
+    justify-self: center; }
 
 #contact-a button[type="submit"] {
   width: 35%;
