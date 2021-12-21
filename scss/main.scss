@@ -24,7 +24,7 @@ a {
   color: $dark-color;
 }
 
-// Remove any bullet points
+// Remove any bullet pointss
 ul {
   list-style: none;
 }
@@ -63,6 +63,13 @@ img {
   justify-content: space-around;
   padding: 1rem;
 
+  #logo {
+    h1,
+    i {
+      padding-bottom: 0.5rem;
+    }
+  }
+
   ul {
     display: flex;
   }
@@ -93,7 +100,7 @@ img {
   &-home {
     grid-area: header-nav;
     background: $bg-color;
-    width: 100%;
+    // width: 100%;
     color: #fff;
     border-bottom: 5px solid $medium-color;
   }
