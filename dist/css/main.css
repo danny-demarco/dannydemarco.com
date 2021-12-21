@@ -505,7 +505,7 @@ img {
   #contact-b .text-fields,
   #contact-c .text-fields,
   #contact-d .text-fields {
-    grid-template-areas: "fullname" "email" "subject" "phone" "message" "message"; }
+    grid-template-areas: "fullname" "email" "subject" "phone" "message" "message" "recaptcha"; }
   #main-grid #home-a .about-info, #main-grid #home-b .about-info, #main-grid #home-c .about-info, #main-grid #home-d .about-info,
   #about-grid #about-a .about-info,
   #about-grid #about-b .about-info,
