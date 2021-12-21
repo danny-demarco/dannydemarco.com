@@ -1,0 +1,140 @@
+// Huge Screens
+@media (min-width: 1200px) {
+  #about-grid #about-a .about-info {
+    .bio p {
+      font-size: medium;
+    }
+  }
+  #about-d .testimonials p {
+    font-size: x-large;
+  }
+  #projects-a .item-text {
+    &-title {
+      font-size: x-large;
+    }
+    &-category {
+      font-size: large;
+    }
+  }
+}
+
+// Desktop
+@media (min-width: 950px) and (max-width: 1200px) {
+  #about-grid #about-a .about-info {
+    .bio p {
+      font-size: small;
+    }
+  }
+}
+
+//Tablets & Smaller
+@media (min-width: 570px) and (max-width: 950px) {
+  #main-nav li {
+    padding: 1rem 0.3rem;
+  }
+  #main-grid #header-content {
+    .header-content {
+      grid-template-columns: 1fr minmax(500px, 500px) 1fr;
+      grid-template-rows: 0.2fr 0.1fr minmax(500px, 500px) 0.75fr;
+    }
+  }
+
+  #about-grid #about-a .about-info {
+    .bio p {
+      font-size: x-small;
+    }
+  }
+
+  #projects-a .item-text-title {
+    font-size: small;
+  }
+}
+
+// Smartphones
+@media (max-width: 570px) {
+  #logo {
+    align-items: center;
+    justify-content: center;
+  }
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem;
+  }
+  #main-grid #header-content {
+    .header-content {
+      grid-template-columns: 1fr minmax(300px, 300px) 1fr;
+      grid-template-rows: 0.2fr 0.1fr minmax(300px, 300px) 0.75fr;
+    }
+    .grid-item {
+      h1 {
+        font-size: x-large;
+      }
+      p {
+        font-size: smaller;
+      }
+      a {
+        padding: 0.4rem 1rem;
+      }
+    }
+  }
+
+  #main-grid #home,
+  #about-grid #about,
+  #projects,
+  #contact {
+    &-a,
+    &-b,
+    &-c,
+    &-d {
+      .text-fields {
+        grid-template-areas:
+          "fullname"
+          "email"
+          "subject"
+          "phone"
+          "message"
+          "message";
+      }
+      .about-info {
+        grid-template-areas: "bio-image" "bio" "aw1" "aw2" "aw4";
+        grid-gap: 3rem;
+
+        .bio {
+          border-right: none;
+          border-bottom: 4px solid $main-color;
+          border-radius: 10px;
+          &-image {
+            width: 50%;
+            justify-self: center;
+          }
+        }
+      }
+      .process,
+      .testimonials,
+      .items,
+      .specials {
+        grid-template-columns: repeat(1, 1fr);
+
+        p,
+        li {
+          font-size: medium;
+        }
+      }
+    }
+  }
+
+  // Footer
+  #main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      justify-content: space-around;
+      margin-top: 1rem;
+    }
+    .social {
+      padding: 1rem;
+    }
+  }
+}
