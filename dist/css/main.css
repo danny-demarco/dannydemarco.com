@@ -490,8 +490,6 @@ img {
     font-size: x-large; }
   #main-grid #header-content .grid-item p {
     font-size: smaller; }
-  #main-grid #header-content .grid-item a {
-    padding: 0.4rem 1rem; }
   #main-grid #home-a .text-fields, #main-grid #home-b .text-fields, #main-grid #home-c .text-fields, #main-grid #home-d .text-fields,
   #about-grid #about-a .text-fields,
   #about-grid #about-b .text-fields,
