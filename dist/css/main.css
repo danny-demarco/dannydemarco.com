@@ -97,39 +97,92 @@ input[class^="btn-"]:hover {
   display: block;
   margin: 0 auto 1rem auto; }
 
-.items {
+#projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0 8px 15px black; }
+  grid-template-areas: "header-nav" "projects-a" "footer"; }
+  #projects-grid #projects-a {
+    grid-area: projects-a; }
+    #projects-grid #projects-a .items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      box-shadow: 0 8px 15px black; }
+    #projects-grid #projects-a .item {
+      position: relative;
+      background-color: #333;
+      color: #f4f4f4;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+      border: silver solid 3px; }
+      #projects-grid #projects-a .item-text-wrap {
+        display: grid;
+        grid-template-areas: "title title" "tech-used tech-used" "description description" "code-btn video-btn"; }
+        #projects-grid #projects-a .item-text-wrap button[type="button"] {
+          width: 75%;
+          border-radius: 20px;
+          padding: 0.2rem 0.6rem;
+          box-shadow: 0 3px 6px silver;
+          margin: 1rem auto; }
+          #projects-grid #projects-a .item-text-wrap button[type="button"] a {
+            color: #333;
+            text-decoration: none; }
+          #projects-grid #projects-a .item-text-wrap button[type="button"]:hover {
+            background-color: #1fbbd6;
+            box-shadow: 0 4px 8px #1fbbd6; }
+            #projects-grid #projects-a .item-text-wrap button[type="button"]:hover a {
+              color: #000;
+              font-weight: bold; }
+      #projects-grid #projects-a .item-text-title {
+        grid-area: title;
+        margin-top: 1rem; }
+      #projects-grid #projects-a .item-text-category {
+        grid-area: tech-used; }
+      #projects-grid #projects-a .item-text-description {
+        grid-area: description;
+        height: 110px;
+        overflow: auto; }
+      #projects-grid #projects-a .item-text-btn {
+        margin: 0.5rem 0.75rem 1rem 0.75rem; }
+        #projects-grid #projects-a .item-text-btn #video-btn {
+          grid-area: video-btn; }
+        #projects-grid #projects-a .item-text-btn #code-btn {
+          grid-area: code-btn; }
+      #projects-grid #projects-a .item::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background: #f4f4f4;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        transform: scale(2) translateX(-75%) translateY(-75%) rotate(-25deg);
+        transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1); }
+      #projects-grid #projects-a .item:hover:after {
+        transform: scale(2) translateX(0%) translateY(0%) rotate(-25deg); }
+      #projects-grid #projects-a .item:hover .item-text-title {
+        color: #1fbbd6;
+        text-shadow: 0 4px 8px #000;
+        transition: color 1s; }
+      #projects-grid #projects-a .item:hover #projects-grid #projects-a .item-image {
+        transform: scale(1.1);
+        transition: transform 1s; }
 
-.item {
-  position: relative;
-  background-color: #333;
-  color: #f4f4f4;
-  overflow: hidden;
-  display: block;
-  text-decoration: none;
-  border: silver solid 3px; }
-  .item::after {
-    content: "";
-    position: absolute;
-    display: block;
-    background: #1fbbd6;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-35deg);
-    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1); }
-  .item:hover:after {
-    transform: scale(2) translateX(0) translateY(0) rotate(-28deg); }
-  .item:hover .item-text {
-    color: #1fbbd6;
-    transition: color 1s; }
-  .item:hover .item-image {
-    transform: scale(1.1);
-    transition: transform 1s; }
+.mfp-wrap .mfp-content {
+  max-width: 75%;
+  margin: 0 auto;
+  margin-left: 10%; }
+  .mfp-wrap .mfp-content iframe {
+    max-width: 80%; }
+  .mfp-wrap .mfp-content .mfp-hide {
+    display: none !important; }
+  .mfp-wrap .mfp-content button.mfp-close {
+    overflow: visible;
+    background-color: gainsboro;
+    z-index: 1091;
+    border-radius: 50%;
+    color: red; }
 
 * {
   margin: 0;
@@ -165,6 +218,8 @@ img {
   color: #fff; }
   #logo div {
     margin: auto 0.3rem; }
+    #logo div h1 {
+      font-size: medium; }
     #logo div:hover {
       color: #1fbbd6;
       cursor: pointer;
@@ -384,42 +439,46 @@ img {
         border-radius: 50%;
         border: 2px solid #1fbbd6; }
 
-#contact-a .text-fields {
+#contact-grid {
   display: grid;
-  grid-template-areas: "fullname email" "subject phone" "message message" "recaptcha recaptcha";
-  grid-gap: 1.2rem;
-  padding: 1rem;
-  margin-bottom: 1.2rem;
-  background-color: #333;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px #333; }
-  #contact-a .text-fields .name-input {
-    grid-area: fullname;
-    border-radius: 5px; }
-  #contact-a .text-fields .subject-input {
-    grid-area: subject;
-    border-radius: 5px; }
-  #contact-a .text-fields .email-input {
-    grid-area: email;
-    border-radius: 5px; }
-  #contact-a .text-fields .phone-input {
-    grid-area: phone;
-    border-radius: 5px; }
-  #contact-a .text-fields .message-input {
-    grid-area: message;
-    height: 150px;
-    border-radius: 5px; }
-  #contact-a .text-fields .text-input {
-    padding: 0.5rem 1rem; }
-  #contact-a .text-fields .recaptcha {
-    grid-area: recaptcha;
-    margin: 0 auto; }
-
-#contact-a button[type="submit"] {
-  width: 35%;
-  box-shadow: 0 8px 15px black; }
-  #contact-a button[type="submit"]:hover {
-    color: #333; }
+  grid-template-areas: "header-nav" "contact-a" "footer"; }
+  #contact-grid #contact-a {
+    grid-area: contact-a; }
+    #contact-grid #contact-a .text-fields {
+      display: grid;
+      grid-template-areas: "fullname email" "subject phone" "message message" "recaptcha recaptcha";
+      grid-gap: 1.2rem;
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px #333; }
+      #contact-grid #contact-a .text-fields .name-input {
+        grid-area: fullname;
+        border-radius: 5px; }
+      #contact-grid #contact-a .text-fields .subject-input {
+        grid-area: subject;
+        border-radius: 5px; }
+      #contact-grid #contact-a .text-fields .email-input {
+        grid-area: email;
+        border-radius: 5px; }
+      #contact-grid #contact-a .text-fields .phone-input {
+        grid-area: phone;
+        border-radius: 5px; }
+      #contact-grid #contact-a .text-fields .message-input {
+        grid-area: message;
+        height: 150px;
+        border-radius: 5px; }
+      #contact-grid #contact-a .text-fields .text-input {
+        padding: 0.5rem 1rem; }
+      #contact-grid #contact-a .text-fields .recaptcha {
+        grid-area: recaptcha;
+        margin: 0 auto; }
+    #contact-grid #contact-a button[type="submit"] {
+      width: 35%;
+      box-shadow: 0 8px 15px black; }
+      #contact-grid #contact-a button[type="submit"]:hover {
+        color: #333; }
 
 #main-footer {
   grid-area: footer;
@@ -458,10 +517,14 @@ img {
   #projects-a .item-text-title {
     font-size: x-large; }
   #projects-a .item-text-category {
-    font-size: large; } }
+    font-size: large; }
+  #projects-a .item-text-description {
+    font-size: small; } }
 
 @media (min-width: 950px) and (max-width: 1200px) {
   #about-grid #about-a .about-info .bio p {
+    font-size: small; }
+  #projects-a .item-text-description {
     font-size: small; } }
 
 @media (min-width: 570px) and (max-width: 950px) {
@@ -495,28 +558,42 @@ img {
   #about-grid #about-b .text-fields,
   #about-grid #about-c .text-fields,
   #about-grid #about-d .text-fields,
-  #projects-a .text-fields,
-  #projects-b .text-fields,
-  #projects-c .text-fields,
-  #projects-d .text-fields,
-  #contact-a .text-fields,
-  #contact-b .text-fields,
-  #contact-c .text-fields,
-  #contact-d .text-fields {
+  #projects-grid #projects-a .text-fields,
+  #projects-grid #projects-b .text-fields,
+  #projects-grid #projects-c .text-fields,
+  #projects-grid #projects-d .text-fields,
+  #contact-grid #contact-a .text-fields,
+  #contact-grid #contact-b .text-fields,
+  #contact-grid #contact-c .text-fields,
+  #contact-grid #contact-d .text-fields {
     grid-template-areas: "fullname" "email" "subject" "phone" "message" "message" "recaptcha"; }
+  #main-grid #home-a .about-logos, #main-grid #home-b .about-logos, #main-grid #home-c .about-logos, #main-grid #home-d .about-logos,
+  #about-grid #about-a .about-logos,
+  #about-grid #about-b .about-logos,
+  #about-grid #about-c .about-logos,
+  #about-grid #about-d .about-logos,
+  #projects-grid #projects-a .about-logos,
+  #projects-grid #projects-b .about-logos,
+  #projects-grid #projects-c .about-logos,
+  #projects-grid #projects-d .about-logos,
+  #contact-grid #contact-a .about-logos,
+  #contact-grid #contact-b .about-logos,
+  #contact-grid #contact-c .about-logos,
+  #contact-grid #contact-d .about-logos {
+    grid-template-columns: repeat(1, 1fr); }
   #main-grid #home-a .about-info, #main-grid #home-b .about-info, #main-grid #home-c .about-info, #main-grid #home-d .about-info,
   #about-grid #about-a .about-info,
   #about-grid #about-b .about-info,
   #about-grid #about-c .about-info,
   #about-grid #about-d .about-info,
-  #projects-a .about-info,
-  #projects-b .about-info,
-  #projects-c .about-info,
-  #projects-d .about-info,
-  #contact-a .about-info,
-  #contact-b .about-info,
-  #contact-c .about-info,
-  #contact-d .about-info {
+  #projects-grid #projects-a .about-info,
+  #projects-grid #projects-b .about-info,
+  #projects-grid #projects-c .about-info,
+  #projects-grid #projects-d .about-info,
+  #contact-grid #contact-a .about-info,
+  #contact-grid #contact-b .about-info,
+  #contact-grid #contact-c .about-info,
+  #contact-grid #contact-d .about-info {
     grid-template-areas: "bio-image" "bio" "aw1" "aw2" "aw4";
     grid-gap: 3rem; }
     #main-grid #home-a .about-info .bio, #main-grid #home-b .about-info .bio, #main-grid #home-c .about-info .bio, #main-grid #home-d .about-info .bio,
@@ -524,14 +601,14 @@ img {
     #about-grid #about-b .about-info .bio,
     #about-grid #about-c .about-info .bio,
     #about-grid #about-d .about-info .bio,
-    #projects-a .about-info .bio,
-    #projects-b .about-info .bio,
-    #projects-c .about-info .bio,
-    #projects-d .about-info .bio,
-    #contact-a .about-info .bio,
-    #contact-b .about-info .bio,
-    #contact-c .about-info .bio,
-    #contact-d .about-info .bio {
+    #projects-grid #projects-a .about-info .bio,
+    #projects-grid #projects-b .about-info .bio,
+    #projects-grid #projects-c .about-info .bio,
+    #projects-grid #projects-d .about-info .bio,
+    #contact-grid #contact-a .about-info .bio,
+    #contact-grid #contact-b .about-info .bio,
+    #contact-grid #contact-c .about-info .bio,
+    #contact-grid #contact-d .about-info .bio {
       border-right: none;
       border-bottom: 4px solid #1fbbd6;
       border-radius: 10px; }
@@ -540,15 +617,15 @@ img {
       #about-grid #about-b .about-info .bio-image,
       #about-grid #about-c .about-info .bio-image,
       #about-grid #about-d .about-info .bio-image,
-      #projects-a .about-info .bio-image,
-      #projects-b .about-info .bio-image,
-      #projects-c .about-info .bio-image,
-      #projects-d .about-info .bio-image,
-      #contact-a .about-info .bio-image,
-      #contact-b .about-info .bio-image,
-      #contact-c .about-info .bio-image,
-      #contact-d .about-info .bio-image {
-        width: 50%;
+      #projects-grid #projects-a .about-info .bio-image,
+      #projects-grid #projects-b .about-info .bio-image,
+      #projects-grid #projects-c .about-info .bio-image,
+      #projects-grid #projects-d .about-info .bio-image,
+      #contact-grid #contact-a .about-info .bio-image,
+      #contact-grid #contact-b .about-info .bio-image,
+      #contact-grid #contact-c .about-info .bio-image,
+      #contact-grid #contact-d .about-info .bio-image {
+        width: 40%;
         justify-self: center; }
   #main-grid #home-a .process,
   #main-grid #home-a .testimonials,
@@ -579,39 +656,225 @@ img {
   #about-grid #about-d .testimonials,
   #about-grid #about-d .items,
   #about-grid #about-d .specials,
-  #projects-a .process,
-  #projects-a .testimonials,
-  #projects-a .items,
-  #projects-a .specials,
-  #projects-b .process,
-  #projects-b .testimonials,
-  #projects-b .items,
-  #projects-b .specials,
-  #projects-c .process,
-  #projects-c .testimonials,
-  #projects-c .items,
-  #projects-c .specials,
-  #projects-d .process,
-  #projects-d .testimonials,
-  #projects-d .items,
-  #projects-d .specials,
-  #contact-a .process,
-  #contact-a .testimonials,
-  #contact-a .items,
-  #contact-a .specials,
-  #contact-b .process,
-  #contact-b .testimonials,
-  #contact-b .items,
-  #contact-b .specials,
-  #contact-c .process,
-  #contact-c .testimonials,
-  #contact-c .items,
-  #contact-c .specials,
-  #contact-d .process,
-  #contact-d .testimonials,
-  #contact-d .items,
-  #contact-d .specials {
+  #projects-grid #projects-a .process,
+  #projects-grid #projects-a .testimonials,
+  #projects-grid #projects-a .items,
+  #projects-grid #projects-a .specials,
+  #projects-grid #projects-b .process,
+  #projects-grid #projects-b .testimonials,
+  #projects-grid #projects-b .items,
+  #projects-grid #projects-b .specials,
+  #projects-grid #projects-c .process,
+  #projects-grid #projects-c .testimonials,
+  #projects-grid #projects-c .items,
+  #projects-grid #projects-c .specials,
+  #projects-grid #projects-d .process,
+  #projects-grid #projects-d .testimonials,
+  #projects-grid #projects-d .items,
+  #projects-grid #projects-d .specials,
+  #contact-grid #contact-a .process,
+  #contact-grid #contact-a .testimonials,
+  #contact-grid #contact-a .items,
+  #contact-grid #contact-a .specials,
+  #contact-grid #contact-b .process,
+  #contact-grid #contact-b .testimonials,
+  #contact-grid #contact-b .items,
+  #contact-grid #contact-b .specials,
+  #contact-grid #contact-c .process,
+  #contact-grid #contact-c .testimonials,
+  #contact-grid #contact-c .items,
+  #contact-grid #contact-c .specials,
+  #contact-grid #contact-d .process,
+  #contact-grid #contact-d .testimonials,
+  #contact-grid #contact-d .items,
+  #contact-grid #contact-d .specials {
     grid-template-columns: repeat(1, 1fr); }
+    #main-grid #home-a .process .item-text-title,
+    #main-grid #home-a .testimonials .item-text-title,
+    #main-grid #home-a .items .item-text-title,
+    #main-grid #home-a .specials .item-text-title, #main-grid #home-b .process .item-text-title,
+    #main-grid #home-b .testimonials .item-text-title,
+    #main-grid #home-b .items .item-text-title,
+    #main-grid #home-b .specials .item-text-title, #main-grid #home-c .process .item-text-title,
+    #main-grid #home-c .testimonials .item-text-title,
+    #main-grid #home-c .items .item-text-title,
+    #main-grid #home-c .specials .item-text-title, #main-grid #home-d .process .item-text-title,
+    #main-grid #home-d .testimonials .item-text-title,
+    #main-grid #home-d .items .item-text-title,
+    #main-grid #home-d .specials .item-text-title,
+    #about-grid #about-a .process .item-text-title,
+    #about-grid #about-a .testimonials .item-text-title,
+    #about-grid #about-a .items .item-text-title,
+    #about-grid #about-a .specials .item-text-title,
+    #about-grid #about-b .process .item-text-title,
+    #about-grid #about-b .testimonials .item-text-title,
+    #about-grid #about-b .items .item-text-title,
+    #about-grid #about-b .specials .item-text-title,
+    #about-grid #about-c .process .item-text-title,
+    #about-grid #about-c .testimonials .item-text-title,
+    #about-grid #about-c .items .item-text-title,
+    #about-grid #about-c .specials .item-text-title,
+    #about-grid #about-d .process .item-text-title,
+    #about-grid #about-d .testimonials .item-text-title,
+    #about-grid #about-d .items .item-text-title,
+    #about-grid #about-d .specials .item-text-title,
+    #projects-grid #projects-a .process .item-text-title,
+    #projects-grid #projects-a .testimonials .item-text-title,
+    #projects-grid #projects-a .items .item-text-title,
+    #projects-grid #projects-a .specials .item-text-title,
+    #projects-grid #projects-b .process .item-text-title,
+    #projects-grid #projects-b .testimonials .item-text-title,
+    #projects-grid #projects-b .items .item-text-title,
+    #projects-grid #projects-b .specials .item-text-title,
+    #projects-grid #projects-c .process .item-text-title,
+    #projects-grid #projects-c .testimonials .item-text-title,
+    #projects-grid #projects-c .items .item-text-title,
+    #projects-grid #projects-c .specials .item-text-title,
+    #projects-grid #projects-d .process .item-text-title,
+    #projects-grid #projects-d .testimonials .item-text-title,
+    #projects-grid #projects-d .items .item-text-title,
+    #projects-grid #projects-d .specials .item-text-title,
+    #contact-grid #contact-a .process .item-text-title,
+    #contact-grid #contact-a .testimonials .item-text-title,
+    #contact-grid #contact-a .items .item-text-title,
+    #contact-grid #contact-a .specials .item-text-title,
+    #contact-grid #contact-b .process .item-text-title,
+    #contact-grid #contact-b .testimonials .item-text-title,
+    #contact-grid #contact-b .items .item-text-title,
+    #contact-grid #contact-b .specials .item-text-title,
+    #contact-grid #contact-c .process .item-text-title,
+    #contact-grid #contact-c .testimonials .item-text-title,
+    #contact-grid #contact-c .items .item-text-title,
+    #contact-grid #contact-c .specials .item-text-title,
+    #contact-grid #contact-d .process .item-text-title,
+    #contact-grid #contact-d .testimonials .item-text-title,
+    #contact-grid #contact-d .items .item-text-title,
+    #contact-grid #contact-d .specials .item-text-title {
+      font-size: xx-large; }
+    #main-grid #home-a .process .item-text-category,
+    #main-grid #home-a .testimonials .item-text-category,
+    #main-grid #home-a .items .item-text-category,
+    #main-grid #home-a .specials .item-text-category, #main-grid #home-b .process .item-text-category,
+    #main-grid #home-b .testimonials .item-text-category,
+    #main-grid #home-b .items .item-text-category,
+    #main-grid #home-b .specials .item-text-category, #main-grid #home-c .process .item-text-category,
+    #main-grid #home-c .testimonials .item-text-category,
+    #main-grid #home-c .items .item-text-category,
+    #main-grid #home-c .specials .item-text-category, #main-grid #home-d .process .item-text-category,
+    #main-grid #home-d .testimonials .item-text-category,
+    #main-grid #home-d .items .item-text-category,
+    #main-grid #home-d .specials .item-text-category,
+    #about-grid #about-a .process .item-text-category,
+    #about-grid #about-a .testimonials .item-text-category,
+    #about-grid #about-a .items .item-text-category,
+    #about-grid #about-a .specials .item-text-category,
+    #about-grid #about-b .process .item-text-category,
+    #about-grid #about-b .testimonials .item-text-category,
+    #about-grid #about-b .items .item-text-category,
+    #about-grid #about-b .specials .item-text-category,
+    #about-grid #about-c .process .item-text-category,
+    #about-grid #about-c .testimonials .item-text-category,
+    #about-grid #about-c .items .item-text-category,
+    #about-grid #about-c .specials .item-text-category,
+    #about-grid #about-d .process .item-text-category,
+    #about-grid #about-d .testimonials .item-text-category,
+    #about-grid #about-d .items .item-text-category,
+    #about-grid #about-d .specials .item-text-category,
+    #projects-grid #projects-a .process .item-text-category,
+    #projects-grid #projects-a .testimonials .item-text-category,
+    #projects-grid #projects-a .items .item-text-category,
+    #projects-grid #projects-a .specials .item-text-category,
+    #projects-grid #projects-b .process .item-text-category,
+    #projects-grid #projects-b .testimonials .item-text-category,
+    #projects-grid #projects-b .items .item-text-category,
+    #projects-grid #projects-b .specials .item-text-category,
+    #projects-grid #projects-c .process .item-text-category,
+    #projects-grid #projects-c .testimonials .item-text-category,
+    #projects-grid #projects-c .items .item-text-category,
+    #projects-grid #projects-c .specials .item-text-category,
+    #projects-grid #projects-d .process .item-text-category,
+    #projects-grid #projects-d .testimonials .item-text-category,
+    #projects-grid #projects-d .items .item-text-category,
+    #projects-grid #projects-d .specials .item-text-category,
+    #contact-grid #contact-a .process .item-text-category,
+    #contact-grid #contact-a .testimonials .item-text-category,
+    #contact-grid #contact-a .items .item-text-category,
+    #contact-grid #contact-a .specials .item-text-category,
+    #contact-grid #contact-b .process .item-text-category,
+    #contact-grid #contact-b .testimonials .item-text-category,
+    #contact-grid #contact-b .items .item-text-category,
+    #contact-grid #contact-b .specials .item-text-category,
+    #contact-grid #contact-c .process .item-text-category,
+    #contact-grid #contact-c .testimonials .item-text-category,
+    #contact-grid #contact-c .items .item-text-category,
+    #contact-grid #contact-c .specials .item-text-category,
+    #contact-grid #contact-d .process .item-text-category,
+    #contact-grid #contact-d .testimonials .item-text-category,
+    #contact-grid #contact-d .items .item-text-category,
+    #contact-grid #contact-d .specials .item-text-category {
+      font-size: x-large; }
+    #main-grid #home-a .process .item-text-description,
+    #main-grid #home-a .testimonials .item-text-description,
+    #main-grid #home-a .items .item-text-description,
+    #main-grid #home-a .specials .item-text-description, #main-grid #home-b .process .item-text-description,
+    #main-grid #home-b .testimonials .item-text-description,
+    #main-grid #home-b .items .item-text-description,
+    #main-grid #home-b .specials .item-text-description, #main-grid #home-c .process .item-text-description,
+    #main-grid #home-c .testimonials .item-text-description,
+    #main-grid #home-c .items .item-text-description,
+    #main-grid #home-c .specials .item-text-description, #main-grid #home-d .process .item-text-description,
+    #main-grid #home-d .testimonials .item-text-description,
+    #main-grid #home-d .items .item-text-description,
+    #main-grid #home-d .specials .item-text-description,
+    #about-grid #about-a .process .item-text-description,
+    #about-grid #about-a .testimonials .item-text-description,
+    #about-grid #about-a .items .item-text-description,
+    #about-grid #about-a .specials .item-text-description,
+    #about-grid #about-b .process .item-text-description,
+    #about-grid #about-b .testimonials .item-text-description,
+    #about-grid #about-b .items .item-text-description,
+    #about-grid #about-b .specials .item-text-description,
+    #about-grid #about-c .process .item-text-description,
+    #about-grid #about-c .testimonials .item-text-description,
+    #about-grid #about-c .items .item-text-description,
+    #about-grid #about-c .specials .item-text-description,
+    #about-grid #about-d .process .item-text-description,
+    #about-grid #about-d .testimonials .item-text-description,
+    #about-grid #about-d .items .item-text-description,
+    #about-grid #about-d .specials .item-text-description,
+    #projects-grid #projects-a .process .item-text-description,
+    #projects-grid #projects-a .testimonials .item-text-description,
+    #projects-grid #projects-a .items .item-text-description,
+    #projects-grid #projects-a .specials .item-text-description,
+    #projects-grid #projects-b .process .item-text-description,
+    #projects-grid #projects-b .testimonials .item-text-description,
+    #projects-grid #projects-b .items .item-text-description,
+    #projects-grid #projects-b .specials .item-text-description,
+    #projects-grid #projects-c .process .item-text-description,
+    #projects-grid #projects-c .testimonials .item-text-description,
+    #projects-grid #projects-c .items .item-text-description,
+    #projects-grid #projects-c .specials .item-text-description,
+    #projects-grid #projects-d .process .item-text-description,
+    #projects-grid #projects-d .testimonials .item-text-description,
+    #projects-grid #projects-d .items .item-text-description,
+    #projects-grid #projects-d .specials .item-text-description,
+    #contact-grid #contact-a .process .item-text-description,
+    #contact-grid #contact-a .testimonials .item-text-description,
+    #contact-grid #contact-a .items .item-text-description,
+    #contact-grid #contact-a .specials .item-text-description,
+    #contact-grid #contact-b .process .item-text-description,
+    #contact-grid #contact-b .testimonials .item-text-description,
+    #contact-grid #contact-b .items .item-text-description,
+    #contact-grid #contact-b .specials .item-text-description,
+    #contact-grid #contact-c .process .item-text-description,
+    #contact-grid #contact-c .testimonials .item-text-description,
+    #contact-grid #contact-c .items .item-text-description,
+    #contact-grid #contact-c .specials .item-text-description,
+    #contact-grid #contact-d .process .item-text-description,
+    #contact-grid #contact-d .testimonials .item-text-description,
+    #contact-grid #contact-d .items .item-text-description,
+    #contact-grid #contact-d .specials .item-text-description {
+      font-size: medium; }
     #main-grid #home-a .process p,
     #main-grid #home-a .process li,
     #main-grid #home-a .testimonials p,
@@ -673,70 +936,70 @@ img {
     #about-grid #about-d .items li,
     #about-grid #about-d .specials p,
     #about-grid #about-d .specials li,
-    #projects-a .process p,
-    #projects-a .process li,
-    #projects-a .testimonials p,
-    #projects-a .testimonials li,
-    #projects-a .items p,
-    #projects-a .items li,
-    #projects-a .specials p,
-    #projects-a .specials li,
-    #projects-b .process p,
-    #projects-b .process li,
-    #projects-b .testimonials p,
-    #projects-b .testimonials li,
-    #projects-b .items p,
-    #projects-b .items li,
-    #projects-b .specials p,
-    #projects-b .specials li,
-    #projects-c .process p,
-    #projects-c .process li,
-    #projects-c .testimonials p,
-    #projects-c .testimonials li,
-    #projects-c .items p,
-    #projects-c .items li,
-    #projects-c .specials p,
-    #projects-c .specials li,
-    #projects-d .process p,
-    #projects-d .process li,
-    #projects-d .testimonials p,
-    #projects-d .testimonials li,
-    #projects-d .items p,
-    #projects-d .items li,
-    #projects-d .specials p,
-    #projects-d .specials li,
-    #contact-a .process p,
-    #contact-a .process li,
-    #contact-a .testimonials p,
-    #contact-a .testimonials li,
-    #contact-a .items p,
-    #contact-a .items li,
-    #contact-a .specials p,
-    #contact-a .specials li,
-    #contact-b .process p,
-    #contact-b .process li,
-    #contact-b .testimonials p,
-    #contact-b .testimonials li,
-    #contact-b .items p,
-    #contact-b .items li,
-    #contact-b .specials p,
-    #contact-b .specials li,
-    #contact-c .process p,
-    #contact-c .process li,
-    #contact-c .testimonials p,
-    #contact-c .testimonials li,
-    #contact-c .items p,
-    #contact-c .items li,
-    #contact-c .specials p,
-    #contact-c .specials li,
-    #contact-d .process p,
-    #contact-d .process li,
-    #contact-d .testimonials p,
-    #contact-d .testimonials li,
-    #contact-d .items p,
-    #contact-d .items li,
-    #contact-d .specials p,
-    #contact-d .specials li {
+    #projects-grid #projects-a .process p,
+    #projects-grid #projects-a .process li,
+    #projects-grid #projects-a .testimonials p,
+    #projects-grid #projects-a .testimonials li,
+    #projects-grid #projects-a .items p,
+    #projects-grid #projects-a .items li,
+    #projects-grid #projects-a .specials p,
+    #projects-grid #projects-a .specials li,
+    #projects-grid #projects-b .process p,
+    #projects-grid #projects-b .process li,
+    #projects-grid #projects-b .testimonials p,
+    #projects-grid #projects-b .testimonials li,
+    #projects-grid #projects-b .items p,
+    #projects-grid #projects-b .items li,
+    #projects-grid #projects-b .specials p,
+    #projects-grid #projects-b .specials li,
+    #projects-grid #projects-c .process p,
+    #projects-grid #projects-c .process li,
+    #projects-grid #projects-c .testimonials p,
+    #projects-grid #projects-c .testimonials li,
+    #projects-grid #projects-c .items p,
+    #projects-grid #projects-c .items li,
+    #projects-grid #projects-c .specials p,
+    #projects-grid #projects-c .specials li,
+    #projects-grid #projects-d .process p,
+    #projects-grid #projects-d .process li,
+    #projects-grid #projects-d .testimonials p,
+    #projects-grid #projects-d .testimonials li,
+    #projects-grid #projects-d .items p,
+    #projects-grid #projects-d .items li,
+    #projects-grid #projects-d .specials p,
+    #projects-grid #projects-d .specials li,
+    #contact-grid #contact-a .process p,
+    #contact-grid #contact-a .process li,
+    #contact-grid #contact-a .testimonials p,
+    #contact-grid #contact-a .testimonials li,
+    #contact-grid #contact-a .items p,
+    #contact-grid #contact-a .items li,
+    #contact-grid #contact-a .specials p,
+    #contact-grid #contact-a .specials li,
+    #contact-grid #contact-b .process p,
+    #contact-grid #contact-b .process li,
+    #contact-grid #contact-b .testimonials p,
+    #contact-grid #contact-b .testimonials li,
+    #contact-grid #contact-b .items p,
+    #contact-grid #contact-b .items li,
+    #contact-grid #contact-b .specials p,
+    #contact-grid #contact-b .specials li,
+    #contact-grid #contact-c .process p,
+    #contact-grid #contact-c .process li,
+    #contact-grid #contact-c .testimonials p,
+    #contact-grid #contact-c .testimonials li,
+    #contact-grid #contact-c .items p,
+    #contact-grid #contact-c .items li,
+    #contact-grid #contact-c .specials p,
+    #contact-grid #contact-c .specials li,
+    #contact-grid #contact-d .process p,
+    #contact-grid #contact-d .process li,
+    #contact-grid #contact-d .testimonials p,
+    #contact-grid #contact-d .testimonials li,
+    #contact-grid #contact-d .items p,
+    #contact-grid #contact-d .items li,
+    #contact-grid #contact-d .specials p,
+    #contact-grid #contact-d .specials li {
       font-size: medium; }
   #main-footer {
     height: 7rem; }

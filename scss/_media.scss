@@ -15,6 +15,10 @@
     &-category {
       font-size: large;
     }
+
+    &-description {
+      font-size: small;
+    }
   }
 }
 
@@ -22,6 +26,11 @@
 @media (min-width: 950px) and (max-width: 1200px) {
   #about-grid #about-a .about-info {
     .bio p {
+      font-size: small;
+    }
+  }
+  #projects-a .item-text {
+    &-description {
       font-size: small;
     }
   }
@@ -85,8 +94,8 @@
 
   #main-grid #home,
   #about-grid #about,
-  #projects,
-  #contact {
+  #projects-grid #projects,
+  #contact-grid #contact {
     &-a,
     &-b,
     &-c,
@@ -101,6 +110,9 @@
           "message"
           "recaptcha";
       }
+      .about-logos {
+        grid-template-columns: repeat(1, 1fr);
+      }
       .about-info {
         grid-template-areas: "bio-image" "bio" "aw1" "aw2" "aw4";
         grid-gap: 3rem;
@@ -110,7 +122,7 @@
           border-bottom: 4px solid $main-color;
           border-radius: 10px;
           &-image {
-            width: 50%;
+            width: 40%;
             justify-self: center;
           }
         }
@@ -121,6 +133,19 @@
       .specials {
         grid-template-columns: repeat(1, 1fr);
 
+        .item-text {
+          &-title {
+            font-size: xx-large;
+          }
+          &-category {
+            font-size: x-large;
+          }
+
+          &-description {
+            font-size: medium;
+          }
+        }
+
         p,
         li {
           font-size: medium;
@@ -128,6 +153,19 @@
       }
     }
   }
+
+  // #projects-a .item-text {
+  //   &-title {
+  //     font-size: large;
+  //   }
+  //   &-category {
+  //     font-size: medium;
+  //   }
+
+  //   &-description {
+  //     font-size: x-small;
+  //   }
+  // }
 
   // Footer
   #main-footer {
