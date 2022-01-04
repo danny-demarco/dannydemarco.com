@@ -446,7 +446,8 @@ img {
 
 #contact-grid {
   display: grid;
-  grid-template-areas: "header-nav" "contact-a" "footer"; }
+  grid-template-areas: "header-nav" "contact-a" "footer";
+  margin: auto 0; }
   #contact-grid #contact-a {
     grid-area: contact-a; }
     #contact-grid #contact-a .text-fields {
