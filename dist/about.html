@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
   <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css"> -->
   <title>About Me | Danny Demarco</title>
 </head>
+
 <body>
   <section id="about-grid">
     <!-- Header -->
@@ -27,7 +29,9 @@
               <a href="contact.html"><i class="fas fa-handshake fa-2x"></i></a>
             </div>
             <div>
-              <a href="contact.html"><h1>Danny Demarco</h1></a>
+              <a href="contact.html">
+                <h1>Danny Demarco</h1>
+              </a>
             </div>
           </div>
           <ul>
@@ -39,7 +43,7 @@
         </nav>
       </div>
     </header>
-  
+
     <!-- Section A: Info -->
     <section id="about-a" class="text-center py-2">
       <div class="container">
@@ -50,17 +54,31 @@
           <img src="img/profile1.png" alt="" class="bio-image">
           <div class="bio bg-light">
             <h3>What can I bring to your table?</h3>
-            <p>I am an inquisitive, conscientious, and highly motivated individual with a wealth of experience in technical and supervisory roles. During my years as an electrician, qualified supervisor and small business owner I have developed a unique set of transferable skills that can complement the knowledge I have gained throughout my education at university. Specific skills that I can offer that are hard to find in inexperienced graduates are; demonstrable experience in working within, and leading small teams, a practiced methodical approach to problem solving, and an ability to approach tasks with an appreciation for both client and business interests.</p><br>
-            <p>Returning to university as a mature student was a humbling experience, taking me directly from respected expert to complete beginner, and has instilled in me the spirit of being a lifelong learner, always open to further developing my skills. I have always excelled in mathematical subjects and have developed a real passion for coding. During my time studying I have learned a wide range of technologies, supplementing my learning with self-study, with the aim of enabling me to learn new technologies quickly and easily. I always focus on writing clean, well tested, well documented, and reusable code. I believe this approach will allow me to quickly settle into any future role, no matter the specific stack of technologies your company adopts.</p><br>
-            <p>Thanks for taking the time to review my bio. Please get in touch if you think I may be a good fit for your company</p>
+            <p>I am an inquisitive, conscientious, and highly motivated individual with a wealth of experience in
+              technical and supervisory roles. During my years as an electrician, qualified supervisor and small
+              business owner I have developed a unique set of transferable skills that can complement the knowledge I
+              have gained throughout my education at university. Specific skills that I can offer that are hard to find
+              in inexperienced graduates are; demonstrable experience in working within, and leading small teams, a
+              practiced methodical approach to problem solving, and an ability to approach tasks with an appreciation
+              for both client and business interests.</p><br>
+            <p>Returning to university as a mature student was a humbling experience, taking me directly from respected
+              expert to complete beginner, and has instilled in me the spirit of being a lifelong learner, always open
+              to further developing my skills. I have always excelled in mathematical subjects and have developed a real
+              passion for coding. During my time studying I have learned a wide range of technologies, supplementing my
+              learning with self-study, with the aim of enabling me to learn new technologies quickly and easily. I
+              always focus on writing clean, well tested, well documented, and reusable code. I believe this approach
+              will allow me to quickly settle into any future role, no matter the specific stack of technologies your
+              company adopts.</p><br>
+            <p>Thanks for taking the time to review my bio. Please get in touch if you think I may be a good fit for
+              your company</p>
           </div>
-          <a href="../dist/uploads/foundation.pdf#toolbar=0" target="_blank">
+          <a href="../dist/img/fy.PNG#toolbar=0" target="_blank">
             <div class="award-1">
               <i class="fas fa-scroll fa-2x"></i>
               <h3>My Foundation Year Transcript</h3>
             </div>
           </a>
-          <a href="../dist/uploads/degree.pdf#toolbar=0" target="_blank">
+          <a href="../dist/img/deg.PNG" target="_blank">
             <div class="award-2">
               <i class="fas fa-user-graduate fa-2x"></i>
               <h3>My BEng Civ-Eng Degree</h3>
@@ -73,19 +91,25 @@
 
           <!-- NEED TO ADD CV -->
           <div class="award-4">
-            <i class="fas fa-envelope-open-text fa-2x"></i>
-            <h3>My CV</h3>
+            <a href="contact.html">
+              <i class="fas fa-envelope-open-text fa-2x"></i>
+              <h3>My CV</h3>
+            </a>
           </div>
         </div>
       </div>
     </section>
-  
+
     <!-- Section B - Progress Bars -->
     <section id="about-b" class="bg-dark py-2">
       <div class="container">
         <h2 class="section-title">Technical Skills</h2>
         <div class="bottom-line"></div>
         <h4>Python: </h4>
+        <div class="progress">
+          <div style="width:95%"></div>
+        </div>
+        <h4>Django: </h4>
         <div class="progress">
           <div style="width:90%"></div>
         </div>
@@ -95,15 +119,15 @@
         </div>
         <h4>SQL: </h4>
         <div class="progress">
-          <div style="width:70%"></div>
+          <div style="width:80%"></div>
         </div>
         <h4>HTML: </h4>
         <div class="progress">
-          <div style="width:100%"></div>
+          <div style="width:98%"></div>
         </div>
         <h4>CSS: </h4>
         <div class="progress">
-          <div style="width:95%"></div>
+          <div style="width:90%"></div>
         </div>
         <h4>Microsoft Office: </h4>
         <div class="progress">
@@ -111,12 +135,13 @@
         </div>
       </div>
     </section>
-  
+
     <!-- Section C: Logos -->
     <section id="about-c" class="py-2 bg-light">
       <div class="container">
         <div class="about-logos">
           <img class="py-2" src="img/about-logos/python.png" alt="">
+          <img id="django" src="img/about-logos/django-logo-positive.png" alt="">
           <img src="img/about-logos/java.png" alt="">
           <img id="sqlite" src="img/about-logos/sqlite.png" alt="">
           <img src="img/about-logos/html.png" alt="">
@@ -124,7 +149,7 @@
         </div>
       </div>
     </section>
-  
+
     <!-- Section D: Testimonials -->
     <section id="about-d" class="py-1 bg-dark">
       <div class="container">
@@ -134,32 +159,39 @@
         <div class="testimonials">
           <div>
             <ul>
-              <li><img src="img/testimonials/person3.jpg" alt=""></li>
+              <li><img src="img/testimonials/leroy.png" alt=""></li>
               <li>Leroy Heritage</li>
-              <li>Senior Software Developer - Ordinance Survey, UK</li>
+              <li>Senior Software Developer</li>
+              <li>Ordinance Survey, UK</li>
             </ul>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis saepe dolores accusamus? Veritatis aut id vitae deserunt sequi, iure numquam dolor quaerat, facere eveniet nulla alias sit nesciunt ea!</p>
+            <p>I have been both a client of Danny when he ran Demarco Electrical and later acted as a mentor as he has
+              transitioned his focus to software development. He is a diligent and reliable professional with a real
+              drive to become a professional developer. A natural problem solver that I think would be a valuable
+              addition to any team.</p>
           </div>
           <div>
             <ul>
-              <li><img src="img/testimonials/person1.jpg" alt=""></li>
+              <li><img src="img/testimonials/adam.jpg" alt=""></li>
               <li>Adam Field</li>
-              <li>Project Manager - HS2, UK</li>
+              <li>Project Manager</li>
+              <li>Ferrovial (HS2), UK</li>
             </ul>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis saepe dolores accusamus? Veritatis aut id vitae deserunt sequi, iure numquam dolor quaerat, facere eveniet nulla alias sit nesciunt ea!</p>
+            <p>I studied alongside Danny throughout our bachelor degree. He has a real talent for numbers and is a
+              dedicated hard worker in whatever he does. He was running property refurbs alongside an engineering degree
+              and still never missed a deadline. A great team player and loves anything to do with coding.</p>
           </div>
-          <div>
+          <!-- <div>
             <ul>
               <li><img src="img/testimonials/person2.jpg" alt=""></li>
               <li>Katy Dobson</li>
               <li>Course Director - University of Leeds</li>
             </ul>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non blanditiis saepe dolores accusamus? Veritatis aut id vitae deserunt sequi, iure numquam dolor quaerat, facere eveniet nulla alias sit nesciunt ea!</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
-  
+
     <!-- Footer -->
     <footer id="main-footer">
       <div class="footer-content container">
@@ -179,4 +211,5 @@
     </footer>
   </section>
 </body>
+
 </html>

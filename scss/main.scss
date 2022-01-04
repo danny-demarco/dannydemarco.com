@@ -161,6 +161,7 @@ img {
 
           &:hover {
             background-color: $main-color;
+            transform: scale(1.3);
           }
         }
       }
@@ -336,12 +337,16 @@ img {
 
       .about-logos {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         grid-gap: 2rem;
 
         img {
           width: 70px;
           justify-self: center;
+        }
+
+        #django {
+          margin: auto 0;
         }
 
         #sqlite {
@@ -361,25 +366,27 @@ img {
 
       .testimonials {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
 
         ul {
           list-style: none;
-          margin-top: 1rem;
+          margin: 1rem;
           display: grid;
           grid-template-rows: 1fr 0.3fr 0.3fr;
           align-items: center;
         }
 
         li {
-          font-size: xx-small;
+          font-size: medium;
         }
 
         p {
           border: 1px solid $light-color;
           border-radius: 5px;
           padding: 0.5rem;
+          height: 210px;
+          text-align: left;
         }
 
         img {

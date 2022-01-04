@@ -294,7 +294,8 @@ img {
           background-color: silver;
           box-shadow: 0 8px 15px #493d47; }
           #main-grid #header-content .header-content #pj-btn a:hover {
-            background-color: #1fbbd6; }
+            background-color: #1fbbd6;
+            transform: scale(1.3); }
       #main-grid #header-content .header-content h1 {
         font-size: 3rem;
         line-height: 1.2; }
@@ -405,11 +406,13 @@ img {
     border-top: 5px solid silver; }
     #about-grid #about-c .about-logos {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       grid-gap: 2rem; }
       #about-grid #about-c .about-logos img {
         width: 70px;
         justify-self: center; }
+      #about-grid #about-c .about-logos #django {
+        margin: auto 0; }
       #about-grid #about-c .about-logos #sqlite {
         padding: 0.5rem 0; }
       #about-grid #about-c .about-logos #office {
@@ -419,20 +422,22 @@ img {
     border-top: 5px solid silver; }
     #about-grid #about-d .testimonials {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem; }
       #about-grid #about-d .testimonials ul {
         list-style: none;
-        margin-top: 1rem;
+        margin: 1rem;
         display: grid;
         grid-template-rows: 1fr 0.3fr 0.3fr;
         align-items: center; }
       #about-grid #about-d .testimonials li {
-        font-size: xx-small; }
+        font-size: medium; }
       #about-grid #about-d .testimonials p {
         border: 1px solid #f4f4f4;
         border-radius: 5px;
-        padding: 0.5rem; }
+        padding: 0.5rem;
+        height: 210px;
+        text-align: left; }
       #about-grid #about-d .testimonials img {
         width: 50px;
         height: 50px;
@@ -525,7 +530,10 @@ img {
   #about-grid #about-a .about-info .bio p {
     font-size: small; }
   #projects-a .item-text-description {
-    font-size: small; } }
+    font-size: small; }
+  #about-grid #about-d .testimonials p {
+    font-size: larger;
+    height: 160px; } }
 
 @media (min-width: 570px) and (max-width: 950px) {
   #main-nav li {
@@ -533,6 +541,11 @@ img {
   #main-grid #header-content .header-content {
     grid-template-columns: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto);
     grid-template-rows: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto) minmax(auto, auto); }
+  #about-grid #about-d .testimonials ul {
+    font-size: large; }
+  #about-grid #about-d .testimonials p {
+    font-size: medium;
+    height: 180px; }
   #about-grid #about-a .about-info .bio p {
     font-size: x-small; }
   #projects-a .item-text-title {
@@ -876,131 +889,68 @@ img {
     #contact-grid #contact-d .specials .item-text-description {
       font-size: medium; }
     #main-grid #home-a .process p,
-    #main-grid #home-a .process li,
     #main-grid #home-a .testimonials p,
-    #main-grid #home-a .testimonials li,
     #main-grid #home-a .items p,
-    #main-grid #home-a .items li,
-    #main-grid #home-a .specials p,
-    #main-grid #home-a .specials li, #main-grid #home-b .process p,
-    #main-grid #home-b .process li,
+    #main-grid #home-a .specials p, #main-grid #home-b .process p,
     #main-grid #home-b .testimonials p,
-    #main-grid #home-b .testimonials li,
     #main-grid #home-b .items p,
-    #main-grid #home-b .items li,
-    #main-grid #home-b .specials p,
-    #main-grid #home-b .specials li, #main-grid #home-c .process p,
-    #main-grid #home-c .process li,
+    #main-grid #home-b .specials p, #main-grid #home-c .process p,
     #main-grid #home-c .testimonials p,
-    #main-grid #home-c .testimonials li,
     #main-grid #home-c .items p,
-    #main-grid #home-c .items li,
-    #main-grid #home-c .specials p,
-    #main-grid #home-c .specials li, #main-grid #home-d .process p,
-    #main-grid #home-d .process li,
+    #main-grid #home-c .specials p, #main-grid #home-d .process p,
     #main-grid #home-d .testimonials p,
-    #main-grid #home-d .testimonials li,
     #main-grid #home-d .items p,
-    #main-grid #home-d .items li,
     #main-grid #home-d .specials p,
-    #main-grid #home-d .specials li,
     #about-grid #about-a .process p,
-    #about-grid #about-a .process li,
     #about-grid #about-a .testimonials p,
-    #about-grid #about-a .testimonials li,
     #about-grid #about-a .items p,
-    #about-grid #about-a .items li,
     #about-grid #about-a .specials p,
-    #about-grid #about-a .specials li,
     #about-grid #about-b .process p,
-    #about-grid #about-b .process li,
     #about-grid #about-b .testimonials p,
-    #about-grid #about-b .testimonials li,
     #about-grid #about-b .items p,
-    #about-grid #about-b .items li,
     #about-grid #about-b .specials p,
-    #about-grid #about-b .specials li,
     #about-grid #about-c .process p,
-    #about-grid #about-c .process li,
     #about-grid #about-c .testimonials p,
-    #about-grid #about-c .testimonials li,
     #about-grid #about-c .items p,
-    #about-grid #about-c .items li,
     #about-grid #about-c .specials p,
-    #about-grid #about-c .specials li,
     #about-grid #about-d .process p,
-    #about-grid #about-d .process li,
     #about-grid #about-d .testimonials p,
-    #about-grid #about-d .testimonials li,
     #about-grid #about-d .items p,
-    #about-grid #about-d .items li,
     #about-grid #about-d .specials p,
-    #about-grid #about-d .specials li,
     #projects-grid #projects-a .process p,
-    #projects-grid #projects-a .process li,
     #projects-grid #projects-a .testimonials p,
-    #projects-grid #projects-a .testimonials li,
     #projects-grid #projects-a .items p,
-    #projects-grid #projects-a .items li,
     #projects-grid #projects-a .specials p,
-    #projects-grid #projects-a .specials li,
     #projects-grid #projects-b .process p,
-    #projects-grid #projects-b .process li,
     #projects-grid #projects-b .testimonials p,
-    #projects-grid #projects-b .testimonials li,
     #projects-grid #projects-b .items p,
-    #projects-grid #projects-b .items li,
     #projects-grid #projects-b .specials p,
-    #projects-grid #projects-b .specials li,
     #projects-grid #projects-c .process p,
-    #projects-grid #projects-c .process li,
     #projects-grid #projects-c .testimonials p,
-    #projects-grid #projects-c .testimonials li,
     #projects-grid #projects-c .items p,
-    #projects-grid #projects-c .items li,
     #projects-grid #projects-c .specials p,
-    #projects-grid #projects-c .specials li,
     #projects-grid #projects-d .process p,
-    #projects-grid #projects-d .process li,
     #projects-grid #projects-d .testimonials p,
-    #projects-grid #projects-d .testimonials li,
     #projects-grid #projects-d .items p,
-    #projects-grid #projects-d .items li,
     #projects-grid #projects-d .specials p,
-    #projects-grid #projects-d .specials li,
     #contact-grid #contact-a .process p,
-    #contact-grid #contact-a .process li,
     #contact-grid #contact-a .testimonials p,
-    #contact-grid #contact-a .testimonials li,
     #contact-grid #contact-a .items p,
-    #contact-grid #contact-a .items li,
     #contact-grid #contact-a .specials p,
-    #contact-grid #contact-a .specials li,
     #contact-grid #contact-b .process p,
-    #contact-grid #contact-b .process li,
     #contact-grid #contact-b .testimonials p,
-    #contact-grid #contact-b .testimonials li,
     #contact-grid #contact-b .items p,
-    #contact-grid #contact-b .items li,
     #contact-grid #contact-b .specials p,
-    #contact-grid #contact-b .specials li,
     #contact-grid #contact-c .process p,
-    #contact-grid #contact-c .process li,
     #contact-grid #contact-c .testimonials p,
-    #contact-grid #contact-c .testimonials li,
     #contact-grid #contact-c .items p,
-    #contact-grid #contact-c .items li,
     #contact-grid #contact-c .specials p,
-    #contact-grid #contact-c .specials li,
     #contact-grid #contact-d .process p,
-    #contact-grid #contact-d .process li,
     #contact-grid #contact-d .testimonials p,
-    #contact-grid #contact-d .testimonials li,
     #contact-grid #contact-d .items p,
-    #contact-grid #contact-d .items li,
-    #contact-grid #contact-d .specials p,
-    #contact-grid #contact-d .specials li {
-      font-size: medium; }
+    #contact-grid #contact-d .specials p {
+      font-size: medium;
+      height: 170px; }
   #main-footer {
     height: 7rem; }
     #main-footer .footer-content {

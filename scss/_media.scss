@@ -34,6 +34,13 @@
       font-size: small;
     }
   }
+  #about-grid #about {
+
+    &-d .testimonials p {
+      font-size: larger;
+      height: 160px;
+    }
+  }
 }
 
 //Tablets & Smaller
@@ -55,11 +62,24 @@
         minmax(auto, auto);
     }
   }
-  #about-grid #about-a .about-info {
-    .bio p {
-      font-size: x-small;
+  #about-grid #about {
+
+    &-d .testimonials {
+      ul {
+        font-size: large;
+      }
+      p{
+        font-size: medium;
+        height: 180px;
+      }
     }
-  }
+
+    &-a .about-info {
+      .bio p {
+        font-size: x-small;
+      }
+    }
+  }  
 
   #projects-a .item-text-title {
     font-size: small;
@@ -146,9 +166,9 @@
           }
         }
 
-        p,
-        li {
+        p{
           font-size: medium;
+          height: 170px;
         }
       }
     }
