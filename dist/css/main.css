@@ -515,7 +515,7 @@ img {
         background: #1fbbd6;
         color: #333; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   #about-grid #about-a .about-info .bio p {
     font-size: medium; }
   #about-d .testimonials p {
@@ -527,7 +527,7 @@ img {
   #projects-a .item-text-description {
     font-size: small; } }
 
-@media (min-width: 950px) and (max-width: 1200px) {
+@media (min-width: 1100px) and (max-width: 1400px) {
   #about-grid #about-a .about-info .bio p {
     font-size: small; }
   #projects-a .item-text-description {
@@ -536,12 +536,14 @@ img {
     font-size: larger;
     height: 160px; } }
 
-@media (min-width: 570px) and (max-width: 950px) {
+@media (min-width: 700px) and (max-width: 1100px) {
   #main-nav li {
     padding: 1rem 0.3rem; }
   #main-grid #header-content .header-content {
     grid-template-columns: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto);
     grid-template-rows: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto) minmax(auto, auto); }
+  #main-grid #home-a .specials {
+    grid-gap: 0rem; }
   #about-grid #about-d .testimonials ul {
     font-size: large; }
   #about-grid #about-d .testimonials p {
@@ -550,9 +552,11 @@ img {
   #about-grid #about-a .about-info .bio p {
     font-size: x-small; }
   #projects-a .item-text-title {
-    font-size: small; } }
+    font-size: medium; }
+  #projects-a .item-text-category {
+    font-size: smaller; } }
 
-@media (max-width: 570px) {
+@media (max-width: 700px) {
   #logo {
     align-items: center;
     justify-content: center; }
@@ -566,7 +570,7 @@ img {
   #main-grid #header-content .grid-item h1 {
     font-size: x-large; }
   #main-grid #header-content .grid-item p {
-    font-size: smaller; }
+    font-size: medium; }
   #main-grid #home-a .text-fields, #main-grid #home-b .text-fields, #main-grid #home-c .text-fields, #main-grid #home-d .text-fields,
   #about-grid #about-a .text-fields,
   #about-grid #about-b .text-fields,

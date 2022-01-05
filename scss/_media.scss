@@ -1,5 +1,5 @@
 // Huge Screens
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   #about-grid #about-a .about-info {
     .bio p {
       font-size: medium;
@@ -23,7 +23,7 @@
 }
 
 // Desktop
-@media (min-width: 950px) and (max-width: 1200px) {
+@media (min-width: 1100px) and (max-width: 1400px) {
   #about-grid #about-a .about-info {
     .bio p {
       font-size: small;
@@ -44,7 +44,8 @@
 }
 
 //Tablets & Smaller
-@media (min-width: 570px) and (max-width: 950px) {
+@media (min-width: 700px) and (max-width: 1100px) {
+
   #main-nav {
     li {
       padding: 1rem 0.3rem;
@@ -61,6 +62,9 @@
         minmax(auto, auto) minmax(auto, auto) minmax(auto, auto)
         minmax(auto, auto);
     }
+  }
+  #main-grid #home-a .specials {
+    grid-gap: 0rem;
   }
   #about-grid #about {
 
@@ -81,13 +85,21 @@
     }
   }  
 
-  #projects-a .item-text-title {
-    font-size: small;
-  }
+  #projects-a {
+
+   .item-text-title {
+    font-size: medium;
+    }
+    .item-text-category {
+      font-size: smaller;
+    }
+  }  
 }
 
 // Smartphones
-@media (max-width: 570px) {
+@media (max-width: 700px) {
+
+  
   #logo {
     align-items: center;
     justify-content: center;
@@ -107,7 +119,7 @@
         font-size: x-large;
       }
       p {
-        font-size: smaller;
+        font-size: medium;
       }
     }
   }
@@ -173,20 +185,6 @@
       }
     }
   }
-
-  // #projects-a .item-text {
-  //   &-title {
-  //     font-size: large;
-  //   }
-  //   &-category {
-  //     font-size: medium;
-  //   }
-
-  //   &-description {
-  //     font-size: x-small;
-  //   }
-  // }
-
   // Footer
   #main-footer {
     height: 7rem;
