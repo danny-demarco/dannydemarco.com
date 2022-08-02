@@ -2,85 +2,109 @@
   max-width: 1280px;
   padding: 1.5rem;
   margin: auto;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .bg-light {
   background-color: #f4f4f4;
-  color: #000; }
+  color: #000;
+}
 
 .bg-dark {
   background-color: #333;
-  color: #f4f4f4; }
+  color: #f4f4f4;
+}
 
-.btn-main, .btn-light, .btn-dark {
+.btn-main,
+.btn-light,
+.btn-dark {
   display: inline-block;
   padding: 0.8rem 2rem;
   transition: all 0.5s;
   border: none;
   border-radius: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .btn-main {
   color: #333;
-  background-color: #1fbbd6; }
+  background-color: #1fbbd6;
+}
 
 .btn-light {
   color: #333;
-  background-color: #f4f4f4; }
+  background-color: #f4f4f4;
+}
 
 .btn-dark {
   color: #f4f4f4;
-  background-color: #333; }
+  background-color: #333;
+}
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: #1fbbd6;
-  box-shadow: 0 5px 10px #f4f4f4; }
+  box-shadow: 0 5px 10px #f4f4f4;
+}
 
 .lead {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  text-align: center; }
+  text-align: center;
+}
 
 .text-center {
-  text-align: center; }
+  text-align: center;
+}
 
 .py-1 {
-  padding: 1rem 0; }
+  padding: 1rem 0;
+}
 
 .py-2 {
-  padding: 2rem 0; }
+  padding: 2rem 0;
+}
 
 .py-3 {
-  padding: 3rem 0; }
+  padding: 3rem 0;
+}
 
 .py-4 {
-  padding: 4rem 0; }
+  padding: 4rem 0;
+}
 
 .pt-1 {
-  padding: 1rem 0 0 0; }
+  padding: 1rem 0 0 0;
+}
 
 .pt-2 {
-  padding: 2rem 0 0 0; }
+  padding: 2rem 0 0 0;
+}
 
 .pt-3 {
-  padding: 3rem 0 0 0; }
+  padding: 3rem 0 0 0;
+}
 
 .pt-4 {
-  padding: 4rem 0 0 0; }
+  padding: 4rem 0 0 0;
+}
 
 .my-1 {
-  margin: 1rem 0; }
+  margin: 1rem 0;
+}
 
 .my-2 {
-  margin: 2rem 0; }
+  margin: 2rem 0;
+}
 
 .my-3 {
-  margin: 3rem 0; }
+  margin: 3rem 0;
+}
 
 .my-4 {
-  margin: 4rem 0; }
+  margin: 4rem 0;
+}
 
 .section-title {
   font-size: 2rem;
@@ -88,412 +112,603 @@ input[class^="btn-"]:hover {
   padding: 0.5rem;
   text-align: center;
   font-weight: 100;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .bottom-line {
   height: 2px;
   width: 3rem;
   background: #1fbbd6;
   display: block;
-  margin: 0 auto 1rem auto; }
+  margin: 0 auto 1rem auto;
+}
 
 #projects-grid {
   display: grid;
-  grid-template-areas: "header-nav" "projects-a" "footer"; }
-  #projects-grid #projects-a {
-    grid-area: projects-a; }
-    #projects-grid #projects-a .items {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      box-shadow: 0 8px 15px black; }
-    #projects-grid #projects-a .item {
-      position: relative;
-      background-color: #333;
-      color: #f4f4f4;
-      overflow: hidden;
-      display: block;
-      text-decoration: none;
-      border: silver solid 3px; }
-      #projects-grid #projects-a .item-text-wrap {
-        display: grid;
-        grid-template-areas: "title title"
- "tech-used tech-used"
- "description description"
- "code-btn video-btn"; }
-        #projects-grid #projects-a .item-text-wrap button[type="button"] {
-          width: 75%;
-          border-radius: 20px;
-          padding: 0.2rem 0.6rem;
-          box-shadow: 0 3px 6px silver;
-          margin: 1rem auto; }
-          #projects-grid #projects-a .item-text-wrap button[type="button"] a {
-            color: #333;
-            text-decoration: none; }
-          #projects-grid #projects-a .item-text-wrap button[type="button"]:hover {
-            background-color: #1fbbd6;
-            box-shadow: 0 4px 8px #1fbbd6; }
-            #projects-grid #projects-a .item-text-wrap button[type="button"]:hover a {
-              color: #000;
-              font-weight: bold; }
-      #projects-grid #projects-a .item-text-title {
-        grid-area: title;
-        margin-top: 1rem; }
-      #projects-grid #projects-a .item-text-category {
-        grid-area: tech-used; }
-      #projects-grid #projects-a .item-text-description {
-        grid-area: description;
-        height: 110px;
-        overflow: auto; }
-      #projects-grid #projects-a .item-text-btn {
-        margin: 0.5rem 0.75rem 1rem 0.75rem; }
-        #projects-grid #projects-a .item-text-btn #video-btn {
-          grid-area: video-btn; }
-        #projects-grid #projects-a .item-text-btn #code-btn {
-          grid-area: code-btn; }
-      #projects-grid #projects-a .item::after {
-        content: "";
-        position: absolute;
-        display: block;
-        background: #f4f4f4;
-        opacity: 0.2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 40%;
-        transform: scale(2) translateX(-75%) translateY(-75%) rotate(-25deg);
-        transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1); }
-      #projects-grid #projects-a .item:hover:after {
-        transform: scale(2) translateX(0%) translateY(0%) rotate(-25deg); }
-      #projects-grid #projects-a .item:hover .item-text-title {
-        color: #1fbbd6;
-        text-shadow: 0 4px 8px #000;
-        transition: color 1s; }
-      #projects-grid #projects-a .item:hover #projects-grid #projects-a .item-image {
-        transform: scale(1.1);
-        transition: transform 1s; }
+  grid-template-areas: "header-nav""projects-a""footer";
+}
+
+#projects-grid #projects-a {
+  grid-area: projects-a;
+}
+
+#projects-grid #projects-a .thesis {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  box-shadow: 0 8px 15px black;
+  max-width: 70vh;
+  margin: auto;
+}
+
+#projects-grid #projects-a .items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 8px 15px black;
+}
+
+#projects-grid #projects-a .item {
+  position: relative;
+  background-color: #333;
+  color: #f4f4f4;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  border: silver solid 3px;
+}
+
+#projects-grid #projects-a .item-text-wrap {
+  display: grid;
+  grid-template-areas: "title title"
+    "tech-used tech-used"
+    "description description"
+    "code-btn video-btn";
+}
+
+#projects-grid #projects-a .item-text-wrap button[type="button"] {
+  width: 75%;
+  border-radius: 20px;
+  padding: 0.5rem 0.6rem;
+  box-shadow: 0 3px 6px silver;
+  margin: 1rem auto;
+}
+
+#projects-grid #projects-a .item-text-wrap button[type="button"] a {
+  color: #333;
+  text-decoration: none;
+}
+
+#projects-grid #projects-a .item-text-wrap button[type="button"]:hover {
+  background-color: #1fbbd6;
+  box-shadow: 0 4px 8px #1fbbd6;
+}
+
+#projects-grid #projects-a .item-text-wrap button[type="button"]:hover a {
+  color: #000;
+  font-weight: bold;
+}
+
+#projects-grid #projects-a .item-text-title {
+  grid-area: title;
+  margin-top: 1rem;
+}
+
+#projects-grid #projects-a .item-text-category {
+  grid-area: tech-used;
+}
+
+#projects-grid #projects-a .item-text-description {
+  grid-area: description;
+  height: 110px;
+  overflow: auto;
+  padding: 5px;
+}
+
+#projects-grid #projects-a .item-text-btn {
+  margin: 0.5rem 0.75rem 1rem 0.75rem;
+}
+
+#projects-grid #projects-a .item-text-btn #video-btn {
+  grid-area: video-btn;
+}
+
+#projects-grid #projects-a .item-text-btn #code-btn {
+  grid-area: code-btn;
+}
+
+#projects-grid #projects-a .item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #f4f4f4;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  transform: scale(2) translateX(-75%) translateY(-75%) rotate(-25deg);
+  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+#projects-grid #projects-a .item:hover:after {
+  transform: scale(2) translateX(0%) translateY(0%) rotate(-25deg);
+}
+
+#projects-grid #projects-a .item:hover .item-text-title {
+  color: #1fbbd6;
+  text-shadow: 0 4px 8px #000;
+  transition: color 1s;
+}
+
+#projects-grid #projects-a .item:hover #projects-grid #projects-a .item-image {
+  transform: scale(1.1);
+  transition: transform 1s;
+}
 
 .mfp-wrap .mfp-content {
   max-width: 75%;
   margin: 0 auto;
-  margin-left: 10%; }
-  .mfp-wrap .mfp-content iframe {
-    max-width: 80%; }
-  .mfp-wrap .mfp-content .mfp-hide {
-    display: none !important; }
-  .mfp-wrap .mfp-content button.mfp-close {
-    overflow: visible;
-    background-color: gainsboro;
-    z-index: 1091;
-    border-radius: 50%;
-    color: red; }
+  margin-left: 10%;
+}
+
+.mfp-wrap .mfp-content iframe {
+  max-width: 80%;
+}
+
+.mfp-wrap .mfp-content .mfp-hide {
+  display: none !important;
+}
+
+.mfp-wrap .mfp-content button.mfp-close {
+  overflow: visible;
+  background-color: gainsboro;
+  z-index: 1091;
+  border-radius: 50%;
+  color: red;
+}
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
   font-family: "Dosis", sans-serif;
   line-height: 1.4;
-  background: #fff; }
+  background: #fff;
+}
 
 p {
-  font-size: x-small; }
+  font-size: x-small;
+}
 
 a {
   text-decoration: none;
-  color: #333; }
+  color: #333;
+}
 
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 h2,
 h3,
 h4 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 img {
-  width: 100%; }
+  width: 100%;
+}
 
 #logo {
   display: flex;
   width: 300px;
   height: 70px;
-  color: #fff; }
-  #logo div {
-    margin: auto 0.3rem; }
-    #logo div h1 {
-      font-size: medium; }
-    #logo div:hover {
-      color: #1fbbd6;
-      cursor: pointer;
-      transition: 1s; }
+  color: #fff;
+}
+
+#logo div {
+  margin: auto 0.3rem;
+}
+
+#logo div h1 {
+  font-size: medium;
+}
+
+#logo div:hover {
+  color: #1fbbd6;
+  cursor: pointer;
+  transition: 1s;
+}
 
 #main-nav {
   display: flex;
   justify-content: space-around;
-  padding: 1rem; }
-  #main-nav #logo h1,
-  #main-nav #logo i {
-    padding-bottom: 0.5rem; }
-  #main-nav ul {
-    display: flex; }
-  #main-nav li {
-    padding: 1rem 1rem; }
-  #main-nav a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    border-bottom: 3px transparent solid;
-    padding-bottom: 0.5rem;
-    transition: border-color 0.5s; }
-    #main-nav a:hover {
-      border-color: #1fbbd6;
-      color: #1fbbd6; }
-    #main-nav a.current {
-      border-color: #1fbbd6; }
+  padding: 0rem 1rem;
+}
+
+#main-nav #logo h1,
+#main-nav #logo i {
+  padding-bottom: 0.5rem;
+}
+
+#main-nav ul {
+  display: flex;
+}
+
+#main-nav li {
+  padding: 1rem 1rem;
+}
+
+#main-nav a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+}
+
+#main-nav a:hover {
+  border-color: #1fbbd6;
+  color: #1fbbd6;
+}
+
+#main-nav a.current {
+  border-color: #1fbbd6;
+}
 
 #header-home {
   grid-area: header-nav;
   background: #000;
   color: #fff;
-  border-bottom: 5px solid silver; }
+  border-bottom: 5px solid silver;
+}
 
 #header-inner {
   background: #333;
-  border-bottom: 5px solid silver; }
+  border-bottom: 5px solid silver;
+}
 
 #main-grid {
   display: grid;
-  grid-template-areas: "header-nav" "header-content" "home-a" "home-b" "footer";
-  background-color: #000; }
-  #main-grid #header-content {
-    grid-area: header-content; }
-    #main-grid #header-content .header-content {
-      display: grid;
-      grid-template-columns: 2fr 4fr 2fr;
-      grid-template-rows: 0.2fr 0.1fr 1fr 0.1fr;
-      text-align: center;
-      padding-top: 1%;
-      background-color: #000;
-      color: #f4f4f4; }
-      #main-grid #header-content .header-content #prof-disc {
-        grid-row: 1 / span 1;
-        grid-column: 1 / span 3; }
-      #main-grid #header-content .header-content #prof-sum {
-        grid-row: 2 / span 1;
-        grid-column: 1 / span 3; }
-      #main-grid #header-content .header-content #showcase {
-        background-color: #000;
-        background-image: url("../img/showcase1.jpg") no-repeat center cover;
-        grid-row: 3 / span 2;
-        grid-column: 2 / span 1; }
-      #main-grid #header-content .header-content #pj-btn {
-        grid-row: 4 / span 1;
-        grid-column: 2 / span 1;
-        display: block;
-        justify-content: center;
-        align-self: center; }
-        #main-grid #header-content .header-content #pj-btn a {
-          background-color: silver;
-          box-shadow: 0 8px 15px #493d47; }
-          #main-grid #header-content .header-content #pj-btn a:hover {
-            background-color: #1fbbd6;
-            transform: scale(1.3); }
-      #main-grid #header-content .header-content h1 {
-        font-size: 3rem;
-        line-height: 1.2; }
-  #main-grid #home-a {
-    grid-area: home-a;
-    background-color: #333;
-    color: #f4f4f4;
-    border-bottom: 5px solid silver;
-    border-top: 5px solid silver; }
-    #main-grid #home-a .specials {
-      margin-top: 3rem;
-      display: grid;
-      grid-gap: 1rem;
-      grid-template-columns: repeat(7, 1fr); }
-      #main-grid #home-a .specials .fas,
-      #main-grid #home-a .specials .fab {
-        color: #1fbbd6;
-        text-decoration: none; }
-  #main-grid #home-b {
-    grid-area: home-b;
-    background-color: #f4f4f4; }
-    #main-grid #home-b .process {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 1.5rem;
-      text-align: center; }
-      #main-grid #home-b .process-step {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 28px;
-        background-color: #1fbbd6;
-        color: #f4f4f4;
-        border-radius: 50%;
-        height: 15px;
-        width: 15px;
-        line-height: 15px;
-        padding: 1rem;
-        transition: all 1s; }
-      #main-grid #home-b .process-icon {
-        border-radius: 50%;
-        background-color: #333;
-        color: #f4f4f4;
-        padding: 2rem;
-        width: 70px;
-        line-height: 70px;
-        text-align: center;
-        position: relative;
-        transition: all 1s; }
-        #main-grid #home-b .process-icon:hover {
-          background-color: #1fbbd6;
-          color: #f4f4f4;
-          width: 90px;
-          height: 90px;
-          line-height: 90px; }
-          #main-grid #home-b .process-icon:hover .process-step {
-            background: #333; }
+  grid-template-areas: "header-nav""header-content""home-a""home-b""footer";
+  background-color: #000;
+}
+
+#main-grid #header-content {
+  grid-area: header-content;
+}
+
+#main-grid #header-content .header-content {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-rows: 0.2fr 0.1fr 1fr 0.1fr;
+  text-align: center;
+  padding-top: 1%;
+  background-color: #000;
+  color: #f4f4f4;
+}
+
+#main-grid #header-content .header-content #prof-disc {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 3;
+}
+
+#main-grid #header-content .header-content #prof-sum {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 3;
+}
+
+#main-grid #header-content .header-content #showcase {
+  background-color: #000;
+  background-image: url("../img/showcase1.jpg") no-repeat center cover;
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 1;
+}
+
+#main-grid #header-content .header-content #pj-btn {
+  grid-row: 4 / span 1;
+  grid-column: 2 / span 1;
+  display: block;
+  justify-content: center;
+  align-self: center;
+}
+
+#main-grid #header-content .header-content #pj-btn a {
+  background-color: silver;
+  box-shadow: 0 8px 15px #493d47;
+}
+
+#main-grid #header-content .header-content #pj-btn a:hover {
+  background-color: #1fbbd6;
+  transform: scale(1.3);
+}
+
+#main-grid #header-content .header-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+#main-grid #home-a {
+  grid-area: home-a;
+  background-color: #333;
+  color: #f4f4f4;
+  border-bottom: 5px solid silver;
+  border-top: 5px solid silver;
+}
+
+#main-grid #home-a .specials {
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#main-grid #home-a .specials .fas,
+#main-grid #home-a .specials .fab {
+  color: #1fbbd6;
+  text-decoration: none;
+}
+
+#main-grid #home-b {
+  grid-area: home-b;
+  background-color: #f4f4f4;
+}
+
+#main-grid #home-b .process {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1.5rem;
+  text-align: center;
+}
+
+#main-grid #home-b .process-step {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  background-color: #1fbbd6;
+  color: #f4f4f4;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  padding: 1rem;
+  transition: all 1s;
+}
+
+#main-grid #home-b .process-icon {
+  border-radius: 50%;
+  background-color: #333;
+  color: #f4f4f4;
+  padding: 2rem;
+  width: 70px;
+  line-height: 70px;
+  text-align: center;
+  position: relative;
+  transition: all 1s;
+}
+
+#main-grid #home-b .process-icon:hover {
+  background-color: #1fbbd6;
+  color: #f4f4f4;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+
+#main-grid #home-b .process-icon:hover .process-step {
+  background: #333;
+}
 
 #about-grid {
   display: grid;
-  grid-template-areas: "header-nav" "about-a" "about-b" "about-c" "about-d" "footer"; }
-  #about-grid #about-a {
-    grid-area: about-a; }
-    #about-grid #about-a .about-info {
-      display: grid;
-      grid-template-areas: "bio bio bio-image"
- "aw1 aw2 aw4";
-      grid-gap: 1.2rem; }
-    #about-grid #about-a .bio-image {
-      grid-area: bio-image;
-      background-color: #000;
-      border: 6px #1fbbd6 solid;
-      border-radius: 50%; }
-    #about-grid #about-a .bio {
-      grid-area: bio;
-      border-right: 6px solid #1fbbd6;
-      padding: 0.8rem;
-      border-radius: 10px 0 0 10px; }
-      #about-grid #about-a .bio p {
-        font-size: large; }
-    #about-grid #about-a .award-1 {
-      grid-area: aw1; }
-    #about-grid #about-a .award-2 {
-      grid-area: aw2; }
-    #about-grid #about-a .award-4 {
-      grid-area: aw4; }
-    #about-grid #about-a .award-1 .fas,
-    #about-grid #about-a .award-2 .fas,
-    #about-grid #about-a .award-3 .fas,
-    #about-grid #about-a .award-4 .fas {
-      color: #1fbbd6;
-      margin: 1rem; }
-  #about-grid #about-b {
-    grid-area: about-b;
-    border-top: 5px solid silver; }
-    #about-grid #about-b .progress {
-      overflow: hidden;
-      height: 20px;
-      background-color: silver;
-      border-radius: 5px;
-      margin-bottom: 0.8rem; }
-      #about-grid #about-b .progress div {
-        height: 100px;
-        color: #f4f4f4;
-        text-align: center;
-        background-color: #1fbbd6; }
-  #about-grid #about-c {
-    grid-area: about-c;
-    border-top: 5px solid silver; }
-    #about-grid #about-c .about-logos {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 2rem; }
-      #about-grid #about-c .about-logos img {
-        width: 70px;
-        justify-self: center; }
-      #about-grid #about-c .about-logos #django {
-        margin: auto 0; }
-      #about-grid #about-c .about-logos #sqlite {
-        padding: 0.5rem 0; }
-      #about-grid #about-c .about-logos #js {
-        padding: 1rem 0; }
-      #about-grid #about-c .about-logos #office {
-        padding: 1.7rem 0; }
-  #about-grid #about-d {
-    grid-area: about-d;
-    border-top: 5px solid silver; }
-    #about-grid #about-d .testimonials {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 1rem; }
-      #about-grid #about-d .testimonials ul {
-        list-style: none;
-        margin: 1rem;
-        display: grid;
-        grid-template-rows: 1fr 0.3fr 0.3fr;
-        align-items: center; }
-      #about-grid #about-d .testimonials li {
-        font-size: medium; }
-      #about-grid #about-d .testimonials p {
-        border: 1px solid #f4f4f4;
-        border-radius: 5px;
-        padding: 0.5rem;
-        height: 210px;
-        text-align: left; }
-      #about-grid #about-d .testimonials img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid #1fbbd6; }
+  grid-template-areas: "header-nav""about-a""about-b""about-c""about-d""footer";
+}
+
+#about-grid #about-a {
+  grid-area: about-a;
+}
+
+#about-grid #about-a .about-info {
+  display: grid;
+  grid-template-areas: "bio bio bio-image"
+    "aw1 aw2 aw4";
+  grid-gap: 1.2rem;
+}
+
+#about-grid #about-a .bio-image {
+  grid-area: bio-image;
+  background-color: #000;
+  border: 6px #1fbbd6 solid;
+  border-radius: 50%;
+}
+
+#about-grid #about-a .bio {
+  grid-area: bio;
+  border-right: 6px solid #1fbbd6;
+  padding: 0.8rem;
+  border-radius: 10px 0 0 10px;
+}
+
+#about-grid #about-a .bio p {
+  font-size: large;
+}
+
+#about-grid #about-a .award-1 {
+  grid-area: aw1;
+}
+
+#about-grid #about-a .award-2 {
+  grid-area: aw2;
+}
+
+#about-grid #about-a .award-4 {
+  grid-area: aw4;
+}
+
+#about-grid #about-a .award-1 .fas,
+#about-grid #about-a .award-2 .fas,
+#about-grid #about-a .award-3 .fas,
+#about-grid #about-a .award-4 .fas {
+  color: #1fbbd6;
+  margin: 1rem;
+}
+
+#about-grid #about-b {
+  grid-area: about-b;
+  border-top: 5px solid silver;
+}
+
+#about-grid #about-b .progress {
+  overflow: hidden;
+  height: 20px;
+  background-color: silver;
+  border-radius: 5px;
+  margin-bottom: 0.8rem;
+}
+
+#about-grid #about-b .progress div {
+  height: 100px;
+  color: #f4f4f4;
+  text-align: center;
+  background-color: #1fbbd6;
+}
+
+#about-grid #about-c {
+  grid-area: about-c;
+  border-top: 5px solid silver;
+}
+
+#about-grid #about-c .about-logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2rem;
+}
+
+#about-grid #about-c .about-logos img {
+  width: 70px;
+  justify-self: center;
+}
+
+#about-grid #about-c .about-logos #django {
+  margin: auto 0;
+}
+
+#about-grid #about-c .about-logos #sqlite {
+  padding: 0.5rem 0;
+}
+
+#about-grid #about-c .about-logos #office {
+  padding: 1.7rem 0;
+}
+
+#about-grid #about-d {
+  grid-area: about-d;
+  border-top: 5px solid silver;
+}
+
+#about-grid #about-d .testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+#about-grid #about-d .testimonials ul {
+  list-style: none;
+  margin: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 0.3fr 0.3fr;
+  align-items: center;
+}
+
+#about-grid #about-d .testimonials li {
+  font-size: medium;
+}
+
+#about-grid #about-d .testimonials p {
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+  padding: 0.5rem;
+  height: 210px;
+  text-align: left;
+}
+
+#about-grid #about-d .testimonials img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #1fbbd6;
+}
 
 #contact-grid {
   display: grid;
-  grid-template-areas: "header-nav" "contact-a" "footer";
-  margin: auto 0; }
-  #contact-grid #contact-a {
-    grid-area: contact-a; }
-    #contact-grid #contact-a .text-fields {
-      display: grid;
-      grid-template-areas: "fullname email"
- "subject phone"
- "message message"
- "recaptcha recaptcha";
-      grid-gap: 1.2rem;
-      padding: 1rem;
-      margin-bottom: 1.2rem;
-      background-color: #333;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px #333; }
-      #contact-grid #contact-a .text-fields .name-input {
-        grid-area: fullname;
-        border-radius: 5px; }
-      #contact-grid #contact-a .text-fields .subject-input {
-        grid-area: subject;
-        border-radius: 5px; }
-      #contact-grid #contact-a .text-fields .email-input {
-        grid-area: email;
-        border-radius: 5px; }
-      #contact-grid #contact-a .text-fields .phone-input {
-        grid-area: phone;
-        border-radius: 5px; }
-      #contact-grid #contact-a .text-fields .message-input {
-        grid-area: message;
-        height: 150px;
-        border-radius: 5px; }
-      #contact-grid #contact-a .text-fields .text-input {
-        padding: 0.5rem 1rem; }
-      #contact-grid #contact-a .text-fields .recaptcha {
-        grid-area: recaptcha;
-        margin: 0 auto; }
-    #contact-grid #contact-a button[type="submit"] {
-      width: 35%;
-      box-shadow: 0 8px 15px black; }
-      #contact-grid #contact-a button[type="submit"]:hover {
-        color: #333; }
+  grid-template-areas: "header-nav""contact-a""footer";
+  margin: auto 0;
+}
+
+#contact-grid #contact-a {
+  grid-area: contact-a;
+}
+
+#contact-grid #contact-a .text-fields {
+  display: grid;
+  grid-template-areas: "fullname email"
+    "subject phone"
+    "message message"
+    "recaptcha recaptcha";
+  grid-gap: 1.2rem;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #333;
+}
+
+#contact-grid #contact-a .text-fields .name-input {
+  grid-area: fullname;
+  border-radius: 5px;
+}
+
+#contact-grid #contact-a .text-fields .subject-input {
+  grid-area: subject;
+  border-radius: 5px;
+}
+
+#contact-grid #contact-a .text-fields .email-input {
+  grid-area: email;
+  border-radius: 5px;
+}
+
+#contact-grid #contact-a .text-fields .phone-input {
+  grid-area: phone;
+  border-radius: 5px;
+}
+
+#contact-grid #contact-a .text-fields .message-input {
+  grid-area: message;
+  height: 150px;
+  border-radius: 5px;
+}
+
+#contact-grid #contact-a .text-fields .text-input {
+  padding: 0.5rem 1rem;
+}
+
+#contact-grid #contact-a .text-fields .recaptcha {
+  grid-area: recaptcha;
+  margin: 0 auto;
+}
+
+#contact-grid #contact-a button[type="submit"] {
+  width: 35%;
+  box-shadow: 0 8px 15px black;
+}
+
+#contact-grid #contact-a button[type="submit"]:hover {
+  color: #333;
+}
 
 #main-footer {
   grid-area: footer;
@@ -501,86 +716,138 @@ img {
   color: #f4f4f4;
   height: 6rem;
   border-bottom: 5px solid silver;
-  border-top: 5px solid silver; }
-  #main-footer .footer-content {
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-    align-items: center; }
-    #main-footer .footer-content .social .fab,
-    #main-footer .footer-content .social .fas {
-      display: inline-block;
-      color: #f4f4f4;
-      margin-right: 1rem;
-      border: 2px silver solid;
-      border-radius: 50%;
-      height: 20px;
-      width: 20px;
-      line-height: 20px;
-      text-align: center;
-      padding: 0.5rem; }
-      #main-footer .footer-content .social .fab:hover,
-      #main-footer .footer-content .social .fas:hover {
-        background: #1fbbd6;
-        color: #333; }
+  border-top: 5px solid silver;
+}
+
+#main-footer .footer-content {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+
+#main-footer .footer-content .social .fab,
+#main-footer .footer-content .social .fas {
+  display: inline-block;
+  color: #f4f4f4;
+  margin-right: 1rem;
+  border: 2px silver solid;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#main-footer .footer-content .social .fab:hover,
+#main-footer .footer-content .social .fas:hover {
+  background: #1fbbd6;
+  color: #333;
+}
 
 @media (min-width: 1400px) {
   #about-grid #about-a .about-info .bio p {
-    font-size: medium; }
+    font-size: medium;
+  }
+
   #about-d .testimonials p {
-    font-size: x-large; }
+    font-size: x-large;
+  }
+
   #projects-a .item-text-title {
-    font-size: x-large; }
+    font-size: x-large;
+  }
+
   #projects-a .item-text-category {
-    font-size: large; }
+    font-size: large;
+  }
+
   #projects-a .item-text-description {
-    font-size: small; } }
+    font-size: small;
+  }
+}
 
 @media (min-width: 1100px) and (max-width: 1400px) {
   #about-grid #about-a .about-info .bio p {
-    font-size: small; }
+    font-size: small;
+  }
+
   #projects-a .item-text-description {
-    font-size: small; }
+    font-size: small;
+  }
+
   #about-grid #about-d .testimonials p {
     font-size: larger;
-    height: 160px; } }
+    height: 160px;
+  }
+}
 
 @media (min-width: 700px) and (max-width: 1100px) {
   #main-nav li {
-    padding: 1rem 0.3rem; }
+    padding: 1rem 0.3rem;
+  }
+
   #main-grid #header-content .header-content {
     grid-template-columns: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto);
-    grid-template-rows: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto) minmax(auto, auto); }
+    grid-template-rows: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto) minmax(auto, auto);
+  }
+
   #main-grid #home-a .specials {
-    grid-gap: 0rem; }
+    grid-gap: 0rem;
+  }
+
   #about-grid #about-d .testimonials ul {
-    font-size: large; }
+    font-size: large;
+  }
+
   #about-grid #about-d .testimonials p {
     font-size: medium;
-    height: 180px; }
+    height: 180px;
+  }
+
   #about-grid #about-a .about-info .bio p {
-    font-size: x-small; }
+    font-size: x-small;
+  }
+
   #projects-a .item-text-title {
-    font-size: medium; }
+    font-size: medium;
+  }
+
   #projects-a .item-text-category {
-    font-size: smaller; } }
+    font-size: smaller;
+  }
+}
 
 @media (max-width: 700px) {
   #logo {
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+  }
+
   #main-nav {
     flex-direction: column;
     align-items: center;
-    padding: 0rem; }
+    padding: 0rem;
+  }
+
   #main-grid #header-content .header-content {
     grid-template-columns: 1fr minmax(300px, 300px) 1fr;
-    grid-template-rows: 0.2fr 0.1fr minmax(300px, 300px) 0.75fr; }
+    grid-template-rows: 0.2fr 0.1fr minmax(300px, 300px) 0.75fr;
+  }
+
   #main-grid #header-content .grid-item h1 {
-    font-size: x-large; }
+    font-size: x-large;
+  }
+
   #main-grid #header-content .grid-item p {
-    font-size: medium; }
-  #main-grid #home-a .text-fields, #main-grid #home-b .text-fields, #main-grid #home-c .text-fields, #main-grid #home-d .text-fields,
+    font-size: medium;
+  }
+
+  #main-grid #home-a .text-fields,
+  #main-grid #home-b .text-fields,
+  #main-grid #home-c .text-fields,
+  #main-grid #home-d .text-fields,
   #about-grid #about-a .text-fields,
   #about-grid #about-b .text-fields,
   #about-grid #about-c .text-fields,
@@ -594,13 +861,18 @@ img {
   #contact-grid #contact-c .text-fields,
   #contact-grid #contact-d .text-fields {
     grid-template-areas: "fullname"
- "email"
- "subject"
- "phone"
- "message"
- "message"
- "recaptcha"; }
-  #main-grid #home-a .about-logos, #main-grid #home-b .about-logos, #main-grid #home-c .about-logos, #main-grid #home-d .about-logos,
+      "email"
+      "subject"
+      "phone"
+      "message"
+      "message"
+      "recaptcha";
+  }
+
+  #main-grid #home-a .about-logos,
+  #main-grid #home-b .about-logos,
+  #main-grid #home-c .about-logos,
+  #main-grid #home-d .about-logos,
   #about-grid #about-a .about-logos,
   #about-grid #about-b .about-logos,
   #about-grid #about-c .about-logos,
@@ -613,8 +885,13 @@ img {
   #contact-grid #contact-b .about-logos,
   #contact-grid #contact-c .about-logos,
   #contact-grid #contact-d .about-logos {
-    grid-template-columns: repeat(1, 1fr); }
-  #main-grid #home-a .about-info, #main-grid #home-b .about-info, #main-grid #home-c .about-info, #main-grid #home-d .about-info,
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #main-grid #home-a .about-info,
+  #main-grid #home-b .about-info,
+  #main-grid #home-c .about-info,
+  #main-grid #home-d .about-info,
   #about-grid #about-a .about-info,
   #about-grid #about-b .about-info,
   #about-grid #about-c .about-info,
@@ -627,49 +904,64 @@ img {
   #contact-grid #contact-b .about-info,
   #contact-grid #contact-c .about-info,
   #contact-grid #contact-d .about-info {
-    grid-template-areas: "bio-image" "bio" "aw1" "aw2" "aw4";
-    grid-gap: 3rem; }
-    #main-grid #home-a .about-info .bio, #main-grid #home-b .about-info .bio, #main-grid #home-c .about-info .bio, #main-grid #home-d .about-info .bio,
-    #about-grid #about-a .about-info .bio,
-    #about-grid #about-b .about-info .bio,
-    #about-grid #about-c .about-info .bio,
-    #about-grid #about-d .about-info .bio,
-    #projects-grid #projects-a .about-info .bio,
-    #projects-grid #projects-b .about-info .bio,
-    #projects-grid #projects-c .about-info .bio,
-    #projects-grid #projects-d .about-info .bio,
-    #contact-grid #contact-a .about-info .bio,
-    #contact-grid #contact-b .about-info .bio,
-    #contact-grid #contact-c .about-info .bio,
-    #contact-grid #contact-d .about-info .bio {
-      border-right: none;
-      border-bottom: 4px solid #1fbbd6;
-      border-radius: 10px; }
-      #main-grid #home-a .about-info .bio-image, #main-grid #home-b .about-info .bio-image, #main-grid #home-c .about-info .bio-image, #main-grid #home-d .about-info .bio-image,
-      #about-grid #about-a .about-info .bio-image,
-      #about-grid #about-b .about-info .bio-image,
-      #about-grid #about-c .about-info .bio-image,
-      #about-grid #about-d .about-info .bio-image,
-      #projects-grid #projects-a .about-info .bio-image,
-      #projects-grid #projects-b .about-info .bio-image,
-      #projects-grid #projects-c .about-info .bio-image,
-      #projects-grid #projects-d .about-info .bio-image,
-      #contact-grid #contact-a .about-info .bio-image,
-      #contact-grid #contact-b .about-info .bio-image,
-      #contact-grid #contact-c .about-info .bio-image,
-      #contact-grid #contact-d .about-info .bio-image {
-        width: 40%;
-        justify-self: center; }
+    grid-template-areas: "bio-image""bio""aw1""aw2""aw4";
+    grid-gap: 3rem;
+  }
+
+  #main-grid #home-a .about-info .bio,
+  #main-grid #home-b .about-info .bio,
+  #main-grid #home-c .about-info .bio,
+  #main-grid #home-d .about-info .bio,
+  #about-grid #about-a .about-info .bio,
+  #about-grid #about-b .about-info .bio,
+  #about-grid #about-c .about-info .bio,
+  #about-grid #about-d .about-info .bio,
+  #projects-grid #projects-a .about-info .bio,
+  #projects-grid #projects-b .about-info .bio,
+  #projects-grid #projects-c .about-info .bio,
+  #projects-grid #projects-d .about-info .bio,
+  #contact-grid #contact-a .about-info .bio,
+  #contact-grid #contact-b .about-info .bio,
+  #contact-grid #contact-c .about-info .bio,
+  #contact-grid #contact-d .about-info .bio {
+    border-right: none;
+    border-bottom: 4px solid #1fbbd6;
+    border-radius: 10px;
+  }
+
+  #main-grid #home-a .about-info .bio-image,
+  #main-grid #home-b .about-info .bio-image,
+  #main-grid #home-c .about-info .bio-image,
+  #main-grid #home-d .about-info .bio-image,
+  #about-grid #about-a .about-info .bio-image,
+  #about-grid #about-b .about-info .bio-image,
+  #about-grid #about-c .about-info .bio-image,
+  #about-grid #about-d .about-info .bio-image,
+  #projects-grid #projects-a .about-info .bio-image,
+  #projects-grid #projects-b .about-info .bio-image,
+  #projects-grid #projects-c .about-info .bio-image,
+  #projects-grid #projects-d .about-info .bio-image,
+  #contact-grid #contact-a .about-info .bio-image,
+  #contact-grid #contact-b .about-info .bio-image,
+  #contact-grid #contact-c .about-info .bio-image,
+  #contact-grid #contact-d .about-info .bio-image {
+    width: 40%;
+    justify-self: center;
+  }
+
   #main-grid #home-a .process,
   #main-grid #home-a .testimonials,
   #main-grid #home-a .items,
-  #main-grid #home-a .specials, #main-grid #home-b .process,
+  #main-grid #home-a .specials,
+  #main-grid #home-b .process,
   #main-grid #home-b .testimonials,
   #main-grid #home-b .items,
-  #main-grid #home-b .specials, #main-grid #home-c .process,
+  #main-grid #home-b .specials,
+  #main-grid #home-c .process,
   #main-grid #home-c .testimonials,
   #main-grid #home-c .items,
-  #main-grid #home-c .specials, #main-grid #home-d .process,
+  #main-grid #home-c .specials,
+  #main-grid #home-d .process,
   #main-grid #home-d .testimonials,
   #main-grid #home-d .items,
   #main-grid #home-d .specials,
@@ -721,261 +1013,289 @@ img {
   #contact-grid #contact-d .testimonials,
   #contact-grid #contact-d .items,
   #contact-grid #contact-d .specials {
-    grid-template-columns: repeat(1, 1fr); }
-    #main-grid #home-a .process .item-text-title,
-    #main-grid #home-a .testimonials .item-text-title,
-    #main-grid #home-a .items .item-text-title,
-    #main-grid #home-a .specials .item-text-title, #main-grid #home-b .process .item-text-title,
-    #main-grid #home-b .testimonials .item-text-title,
-    #main-grid #home-b .items .item-text-title,
-    #main-grid #home-b .specials .item-text-title, #main-grid #home-c .process .item-text-title,
-    #main-grid #home-c .testimonials .item-text-title,
-    #main-grid #home-c .items .item-text-title,
-    #main-grid #home-c .specials .item-text-title, #main-grid #home-d .process .item-text-title,
-    #main-grid #home-d .testimonials .item-text-title,
-    #main-grid #home-d .items .item-text-title,
-    #main-grid #home-d .specials .item-text-title,
-    #about-grid #about-a .process .item-text-title,
-    #about-grid #about-a .testimonials .item-text-title,
-    #about-grid #about-a .items .item-text-title,
-    #about-grid #about-a .specials .item-text-title,
-    #about-grid #about-b .process .item-text-title,
-    #about-grid #about-b .testimonials .item-text-title,
-    #about-grid #about-b .items .item-text-title,
-    #about-grid #about-b .specials .item-text-title,
-    #about-grid #about-c .process .item-text-title,
-    #about-grid #about-c .testimonials .item-text-title,
-    #about-grid #about-c .items .item-text-title,
-    #about-grid #about-c .specials .item-text-title,
-    #about-grid #about-d .process .item-text-title,
-    #about-grid #about-d .testimonials .item-text-title,
-    #about-grid #about-d .items .item-text-title,
-    #about-grid #about-d .specials .item-text-title,
-    #projects-grid #projects-a .process .item-text-title,
-    #projects-grid #projects-a .testimonials .item-text-title,
-    #projects-grid #projects-a .items .item-text-title,
-    #projects-grid #projects-a .specials .item-text-title,
-    #projects-grid #projects-b .process .item-text-title,
-    #projects-grid #projects-b .testimonials .item-text-title,
-    #projects-grid #projects-b .items .item-text-title,
-    #projects-grid #projects-b .specials .item-text-title,
-    #projects-grid #projects-c .process .item-text-title,
-    #projects-grid #projects-c .testimonials .item-text-title,
-    #projects-grid #projects-c .items .item-text-title,
-    #projects-grid #projects-c .specials .item-text-title,
-    #projects-grid #projects-d .process .item-text-title,
-    #projects-grid #projects-d .testimonials .item-text-title,
-    #projects-grid #projects-d .items .item-text-title,
-    #projects-grid #projects-d .specials .item-text-title,
-    #contact-grid #contact-a .process .item-text-title,
-    #contact-grid #contact-a .testimonials .item-text-title,
-    #contact-grid #contact-a .items .item-text-title,
-    #contact-grid #contact-a .specials .item-text-title,
-    #contact-grid #contact-b .process .item-text-title,
-    #contact-grid #contact-b .testimonials .item-text-title,
-    #contact-grid #contact-b .items .item-text-title,
-    #contact-grid #contact-b .specials .item-text-title,
-    #contact-grid #contact-c .process .item-text-title,
-    #contact-grid #contact-c .testimonials .item-text-title,
-    #contact-grid #contact-c .items .item-text-title,
-    #contact-grid #contact-c .specials .item-text-title,
-    #contact-grid #contact-d .process .item-text-title,
-    #contact-grid #contact-d .testimonials .item-text-title,
-    #contact-grid #contact-d .items .item-text-title,
-    #contact-grid #contact-d .specials .item-text-title {
-      font-size: xx-large; }
-    #main-grid #home-a .process .item-text-category,
-    #main-grid #home-a .testimonials .item-text-category,
-    #main-grid #home-a .items .item-text-category,
-    #main-grid #home-a .specials .item-text-category, #main-grid #home-b .process .item-text-category,
-    #main-grid #home-b .testimonials .item-text-category,
-    #main-grid #home-b .items .item-text-category,
-    #main-grid #home-b .specials .item-text-category, #main-grid #home-c .process .item-text-category,
-    #main-grid #home-c .testimonials .item-text-category,
-    #main-grid #home-c .items .item-text-category,
-    #main-grid #home-c .specials .item-text-category, #main-grid #home-d .process .item-text-category,
-    #main-grid #home-d .testimonials .item-text-category,
-    #main-grid #home-d .items .item-text-category,
-    #main-grid #home-d .specials .item-text-category,
-    #about-grid #about-a .process .item-text-category,
-    #about-grid #about-a .testimonials .item-text-category,
-    #about-grid #about-a .items .item-text-category,
-    #about-grid #about-a .specials .item-text-category,
-    #about-grid #about-b .process .item-text-category,
-    #about-grid #about-b .testimonials .item-text-category,
-    #about-grid #about-b .items .item-text-category,
-    #about-grid #about-b .specials .item-text-category,
-    #about-grid #about-c .process .item-text-category,
-    #about-grid #about-c .testimonials .item-text-category,
-    #about-grid #about-c .items .item-text-category,
-    #about-grid #about-c .specials .item-text-category,
-    #about-grid #about-d .process .item-text-category,
-    #about-grid #about-d .testimonials .item-text-category,
-    #about-grid #about-d .items .item-text-category,
-    #about-grid #about-d .specials .item-text-category,
-    #projects-grid #projects-a .process .item-text-category,
-    #projects-grid #projects-a .testimonials .item-text-category,
-    #projects-grid #projects-a .items .item-text-category,
-    #projects-grid #projects-a .specials .item-text-category,
-    #projects-grid #projects-b .process .item-text-category,
-    #projects-grid #projects-b .testimonials .item-text-category,
-    #projects-grid #projects-b .items .item-text-category,
-    #projects-grid #projects-b .specials .item-text-category,
-    #projects-grid #projects-c .process .item-text-category,
-    #projects-grid #projects-c .testimonials .item-text-category,
-    #projects-grid #projects-c .items .item-text-category,
-    #projects-grid #projects-c .specials .item-text-category,
-    #projects-grid #projects-d .process .item-text-category,
-    #projects-grid #projects-d .testimonials .item-text-category,
-    #projects-grid #projects-d .items .item-text-category,
-    #projects-grid #projects-d .specials .item-text-category,
-    #contact-grid #contact-a .process .item-text-category,
-    #contact-grid #contact-a .testimonials .item-text-category,
-    #contact-grid #contact-a .items .item-text-category,
-    #contact-grid #contact-a .specials .item-text-category,
-    #contact-grid #contact-b .process .item-text-category,
-    #contact-grid #contact-b .testimonials .item-text-category,
-    #contact-grid #contact-b .items .item-text-category,
-    #contact-grid #contact-b .specials .item-text-category,
-    #contact-grid #contact-c .process .item-text-category,
-    #contact-grid #contact-c .testimonials .item-text-category,
-    #contact-grid #contact-c .items .item-text-category,
-    #contact-grid #contact-c .specials .item-text-category,
-    #contact-grid #contact-d .process .item-text-category,
-    #contact-grid #contact-d .testimonials .item-text-category,
-    #contact-grid #contact-d .items .item-text-category,
-    #contact-grid #contact-d .specials .item-text-category {
-      font-size: x-large; }
-    #main-grid #home-a .process .item-text-description,
-    #main-grid #home-a .testimonials .item-text-description,
-    #main-grid #home-a .items .item-text-description,
-    #main-grid #home-a .specials .item-text-description, #main-grid #home-b .process .item-text-description,
-    #main-grid #home-b .testimonials .item-text-description,
-    #main-grid #home-b .items .item-text-description,
-    #main-grid #home-b .specials .item-text-description, #main-grid #home-c .process .item-text-description,
-    #main-grid #home-c .testimonials .item-text-description,
-    #main-grid #home-c .items .item-text-description,
-    #main-grid #home-c .specials .item-text-description, #main-grid #home-d .process .item-text-description,
-    #main-grid #home-d .testimonials .item-text-description,
-    #main-grid #home-d .items .item-text-description,
-    #main-grid #home-d .specials .item-text-description,
-    #about-grid #about-a .process .item-text-description,
-    #about-grid #about-a .testimonials .item-text-description,
-    #about-grid #about-a .items .item-text-description,
-    #about-grid #about-a .specials .item-text-description,
-    #about-grid #about-b .process .item-text-description,
-    #about-grid #about-b .testimonials .item-text-description,
-    #about-grid #about-b .items .item-text-description,
-    #about-grid #about-b .specials .item-text-description,
-    #about-grid #about-c .process .item-text-description,
-    #about-grid #about-c .testimonials .item-text-description,
-    #about-grid #about-c .items .item-text-description,
-    #about-grid #about-c .specials .item-text-description,
-    #about-grid #about-d .process .item-text-description,
-    #about-grid #about-d .testimonials .item-text-description,
-    #about-grid #about-d .items .item-text-description,
-    #about-grid #about-d .specials .item-text-description,
-    #projects-grid #projects-a .process .item-text-description,
-    #projects-grid #projects-a .testimonials .item-text-description,
-    #projects-grid #projects-a .items .item-text-description,
-    #projects-grid #projects-a .specials .item-text-description,
-    #projects-grid #projects-b .process .item-text-description,
-    #projects-grid #projects-b .testimonials .item-text-description,
-    #projects-grid #projects-b .items .item-text-description,
-    #projects-grid #projects-b .specials .item-text-description,
-    #projects-grid #projects-c .process .item-text-description,
-    #projects-grid #projects-c .testimonials .item-text-description,
-    #projects-grid #projects-c .items .item-text-description,
-    #projects-grid #projects-c .specials .item-text-description,
-    #projects-grid #projects-d .process .item-text-description,
-    #projects-grid #projects-d .testimonials .item-text-description,
-    #projects-grid #projects-d .items .item-text-description,
-    #projects-grid #projects-d .specials .item-text-description,
-    #contact-grid #contact-a .process .item-text-description,
-    #contact-grid #contact-a .testimonials .item-text-description,
-    #contact-grid #contact-a .items .item-text-description,
-    #contact-grid #contact-a .specials .item-text-description,
-    #contact-grid #contact-b .process .item-text-description,
-    #contact-grid #contact-b .testimonials .item-text-description,
-    #contact-grid #contact-b .items .item-text-description,
-    #contact-grid #contact-b .specials .item-text-description,
-    #contact-grid #contact-c .process .item-text-description,
-    #contact-grid #contact-c .testimonials .item-text-description,
-    #contact-grid #contact-c .items .item-text-description,
-    #contact-grid #contact-c .specials .item-text-description,
-    #contact-grid #contact-d .process .item-text-description,
-    #contact-grid #contact-d .testimonials .item-text-description,
-    #contact-grid #contact-d .items .item-text-description,
-    #contact-grid #contact-d .specials .item-text-description {
-      font-size: medium; }
-    #main-grid #home-a .process p,
-    #main-grid #home-a .testimonials p,
-    #main-grid #home-a .items p,
-    #main-grid #home-a .specials p, #main-grid #home-b .process p,
-    #main-grid #home-b .testimonials p,
-    #main-grid #home-b .items p,
-    #main-grid #home-b .specials p, #main-grid #home-c .process p,
-    #main-grid #home-c .testimonials p,
-    #main-grid #home-c .items p,
-    #main-grid #home-c .specials p, #main-grid #home-d .process p,
-    #main-grid #home-d .testimonials p,
-    #main-grid #home-d .items p,
-    #main-grid #home-d .specials p,
-    #about-grid #about-a .process p,
-    #about-grid #about-a .testimonials p,
-    #about-grid #about-a .items p,
-    #about-grid #about-a .specials p,
-    #about-grid #about-b .process p,
-    #about-grid #about-b .testimonials p,
-    #about-grid #about-b .items p,
-    #about-grid #about-b .specials p,
-    #about-grid #about-c .process p,
-    #about-grid #about-c .testimonials p,
-    #about-grid #about-c .items p,
-    #about-grid #about-c .specials p,
-    #about-grid #about-d .process p,
-    #about-grid #about-d .testimonials p,
-    #about-grid #about-d .items p,
-    #about-grid #about-d .specials p,
-    #projects-grid #projects-a .process p,
-    #projects-grid #projects-a .testimonials p,
-    #projects-grid #projects-a .items p,
-    #projects-grid #projects-a .specials p,
-    #projects-grid #projects-b .process p,
-    #projects-grid #projects-b .testimonials p,
-    #projects-grid #projects-b .items p,
-    #projects-grid #projects-b .specials p,
-    #projects-grid #projects-c .process p,
-    #projects-grid #projects-c .testimonials p,
-    #projects-grid #projects-c .items p,
-    #projects-grid #projects-c .specials p,
-    #projects-grid #projects-d .process p,
-    #projects-grid #projects-d .testimonials p,
-    #projects-grid #projects-d .items p,
-    #projects-grid #projects-d .specials p,
-    #contact-grid #contact-a .process p,
-    #contact-grid #contact-a .testimonials p,
-    #contact-grid #contact-a .items p,
-    #contact-grid #contact-a .specials p,
-    #contact-grid #contact-b .process p,
-    #contact-grid #contact-b .testimonials p,
-    #contact-grid #contact-b .items p,
-    #contact-grid #contact-b .specials p,
-    #contact-grid #contact-c .process p,
-    #contact-grid #contact-c .testimonials p,
-    #contact-grid #contact-c .items p,
-    #contact-grid #contact-c .specials p,
-    #contact-grid #contact-d .process p,
-    #contact-grid #contact-d .testimonials p,
-    #contact-grid #contact-d .items p,
-    #contact-grid #contact-d .specials p {
-      font-size: medium;
-      height: 170px; }
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #main-grid #home-a .process .item-text-title,
+  #main-grid #home-a .testimonials .item-text-title,
+  #main-grid #home-a .items .item-text-title,
+  #main-grid #home-a .specials .item-text-title,
+  #main-grid #home-b .process .item-text-title,
+  #main-grid #home-b .testimonials .item-text-title,
+  #main-grid #home-b .items .item-text-title,
+  #main-grid #home-b .specials .item-text-title,
+  #main-grid #home-c .process .item-text-title,
+  #main-grid #home-c .testimonials .item-text-title,
+  #main-grid #home-c .items .item-text-title,
+  #main-grid #home-c .specials .item-text-title,
+  #main-grid #home-d .process .item-text-title,
+  #main-grid #home-d .testimonials .item-text-title,
+  #main-grid #home-d .items .item-text-title,
+  #main-grid #home-d .specials .item-text-title,
+  #about-grid #about-a .process .item-text-title,
+  #about-grid #about-a .testimonials .item-text-title,
+  #about-grid #about-a .items .item-text-title,
+  #about-grid #about-a .specials .item-text-title,
+  #about-grid #about-b .process .item-text-title,
+  #about-grid #about-b .testimonials .item-text-title,
+  #about-grid #about-b .items .item-text-title,
+  #about-grid #about-b .specials .item-text-title,
+  #about-grid #about-c .process .item-text-title,
+  #about-grid #about-c .testimonials .item-text-title,
+  #about-grid #about-c .items .item-text-title,
+  #about-grid #about-c .specials .item-text-title,
+  #about-grid #about-d .process .item-text-title,
+  #about-grid #about-d .testimonials .item-text-title,
+  #about-grid #about-d .items .item-text-title,
+  #about-grid #about-d .specials .item-text-title,
+  #projects-grid #projects-a .process .item-text-title,
+  #projects-grid #projects-a .testimonials .item-text-title,
+  #projects-grid #projects-a .items .item-text-title,
+  #projects-grid #projects-a .specials .item-text-title,
+  #projects-grid #projects-b .process .item-text-title,
+  #projects-grid #projects-b .testimonials .item-text-title,
+  #projects-grid #projects-b .items .item-text-title,
+  #projects-grid #projects-b .specials .item-text-title,
+  #projects-grid #projects-c .process .item-text-title,
+  #projects-grid #projects-c .testimonials .item-text-title,
+  #projects-grid #projects-c .items .item-text-title,
+  #projects-grid #projects-c .specials .item-text-title,
+  #projects-grid #projects-d .process .item-text-title,
+  #projects-grid #projects-d .testimonials .item-text-title,
+  #projects-grid #projects-d .items .item-text-title,
+  #projects-grid #projects-d .specials .item-text-title,
+  #contact-grid #contact-a .process .item-text-title,
+  #contact-grid #contact-a .testimonials .item-text-title,
+  #contact-grid #contact-a .items .item-text-title,
+  #contact-grid #contact-a .specials .item-text-title,
+  #contact-grid #contact-b .process .item-text-title,
+  #contact-grid #contact-b .testimonials .item-text-title,
+  #contact-grid #contact-b .items .item-text-title,
+  #contact-grid #contact-b .specials .item-text-title,
+  #contact-grid #contact-c .process .item-text-title,
+  #contact-grid #contact-c .testimonials .item-text-title,
+  #contact-grid #contact-c .items .item-text-title,
+  #contact-grid #contact-c .specials .item-text-title,
+  #contact-grid #contact-d .process .item-text-title,
+  #contact-grid #contact-d .testimonials .item-text-title,
+  #contact-grid #contact-d .items .item-text-title,
+  #contact-grid #contact-d .specials .item-text-title {
+    font-size: xx-large;
+  }
+
+  #main-grid #home-a .process .item-text-category,
+  #main-grid #home-a .testimonials .item-text-category,
+  #main-grid #home-a .items .item-text-category,
+  #main-grid #home-a .specials .item-text-category,
+  #main-grid #home-b .process .item-text-category,
+  #main-grid #home-b .testimonials .item-text-category,
+  #main-grid #home-b .items .item-text-category,
+  #main-grid #home-b .specials .item-text-category,
+  #main-grid #home-c .process .item-text-category,
+  #main-grid #home-c .testimonials .item-text-category,
+  #main-grid #home-c .items .item-text-category,
+  #main-grid #home-c .specials .item-text-category,
+  #main-grid #home-d .process .item-text-category,
+  #main-grid #home-d .testimonials .item-text-category,
+  #main-grid #home-d .items .item-text-category,
+  #main-grid #home-d .specials .item-text-category,
+  #about-grid #about-a .process .item-text-category,
+  #about-grid #about-a .testimonials .item-text-category,
+  #about-grid #about-a .items .item-text-category,
+  #about-grid #about-a .specials .item-text-category,
+  #about-grid #about-b .process .item-text-category,
+  #about-grid #about-b .testimonials .item-text-category,
+  #about-grid #about-b .items .item-text-category,
+  #about-grid #about-b .specials .item-text-category,
+  #about-grid #about-c .process .item-text-category,
+  #about-grid #about-c .testimonials .item-text-category,
+  #about-grid #about-c .items .item-text-category,
+  #about-grid #about-c .specials .item-text-category,
+  #about-grid #about-d .process .item-text-category,
+  #about-grid #about-d .testimonials .item-text-category,
+  #about-grid #about-d .items .item-text-category,
+  #about-grid #about-d .specials .item-text-category,
+  #projects-grid #projects-a .process .item-text-category,
+  #projects-grid #projects-a .testimonials .item-text-category,
+  #projects-grid #projects-a .items .item-text-category,
+  #projects-grid #projects-a .specials .item-text-category,
+  #projects-grid #projects-b .process .item-text-category,
+  #projects-grid #projects-b .testimonials .item-text-category,
+  #projects-grid #projects-b .items .item-text-category,
+  #projects-grid #projects-b .specials .item-text-category,
+  #projects-grid #projects-c .process .item-text-category,
+  #projects-grid #projects-c .testimonials .item-text-category,
+  #projects-grid #projects-c .items .item-text-category,
+  #projects-grid #projects-c .specials .item-text-category,
+  #projects-grid #projects-d .process .item-text-category,
+  #projects-grid #projects-d .testimonials .item-text-category,
+  #projects-grid #projects-d .items .item-text-category,
+  #projects-grid #projects-d .specials .item-text-category,
+  #contact-grid #contact-a .process .item-text-category,
+  #contact-grid #contact-a .testimonials .item-text-category,
+  #contact-grid #contact-a .items .item-text-category,
+  #contact-grid #contact-a .specials .item-text-category,
+  #contact-grid #contact-b .process .item-text-category,
+  #contact-grid #contact-b .testimonials .item-text-category,
+  #contact-grid #contact-b .items .item-text-category,
+  #contact-grid #contact-b .specials .item-text-category,
+  #contact-grid #contact-c .process .item-text-category,
+  #contact-grid #contact-c .testimonials .item-text-category,
+  #contact-grid #contact-c .items .item-text-category,
+  #contact-grid #contact-c .specials .item-text-category,
+  #contact-grid #contact-d .process .item-text-category,
+  #contact-grid #contact-d .testimonials .item-text-category,
+  #contact-grid #contact-d .items .item-text-category,
+  #contact-grid #contact-d .specials .item-text-category {
+    font-size: x-large;
+  }
+
+  #main-grid #home-a .process .item-text-description,
+  #main-grid #home-a .testimonials .item-text-description,
+  #main-grid #home-a .items .item-text-description,
+  #main-grid #home-a .specials .item-text-description,
+  #main-grid #home-b .process .item-text-description,
+  #main-grid #home-b .testimonials .item-text-description,
+  #main-grid #home-b .items .item-text-description,
+  #main-grid #home-b .specials .item-text-description,
+  #main-grid #home-c .process .item-text-description,
+  #main-grid #home-c .testimonials .item-text-description,
+  #main-grid #home-c .items .item-text-description,
+  #main-grid #home-c .specials .item-text-description,
+  #main-grid #home-d .process .item-text-description,
+  #main-grid #home-d .testimonials .item-text-description,
+  #main-grid #home-d .items .item-text-description,
+  #main-grid #home-d .specials .item-text-description,
+  #about-grid #about-a .process .item-text-description,
+  #about-grid #about-a .testimonials .item-text-description,
+  #about-grid #about-a .items .item-text-description,
+  #about-grid #about-a .specials .item-text-description,
+  #about-grid #about-b .process .item-text-description,
+  #about-grid #about-b .testimonials .item-text-description,
+  #about-grid #about-b .items .item-text-description,
+  #about-grid #about-b .specials .item-text-description,
+  #about-grid #about-c .process .item-text-description,
+  #about-grid #about-c .testimonials .item-text-description,
+  #about-grid #about-c .items .item-text-description,
+  #about-grid #about-c .specials .item-text-description,
+  #about-grid #about-d .process .item-text-description,
+  #about-grid #about-d .testimonials .item-text-description,
+  #about-grid #about-d .items .item-text-description,
+  #about-grid #about-d .specials .item-text-description,
+  #projects-grid #projects-a .process .item-text-description,
+  #projects-grid #projects-a .testimonials .item-text-description,
+  #projects-grid #projects-a .items .item-text-description,
+  #projects-grid #projects-a .specials .item-text-description,
+  #projects-grid #projects-b .process .item-text-description,
+  #projects-grid #projects-b .testimonials .item-text-description,
+  #projects-grid #projects-b .items .item-text-description,
+  #projects-grid #projects-b .specials .item-text-description,
+  #projects-grid #projects-c .process .item-text-description,
+  #projects-grid #projects-c .testimonials .item-text-description,
+  #projects-grid #projects-c .items .item-text-description,
+  #projects-grid #projects-c .specials .item-text-description,
+  #projects-grid #projects-d .process .item-text-description,
+  #projects-grid #projects-d .testimonials .item-text-description,
+  #projects-grid #projects-d .items .item-text-description,
+  #projects-grid #projects-d .specials .item-text-description,
+  #contact-grid #contact-a .process .item-text-description,
+  #contact-grid #contact-a .testimonials .item-text-description,
+  #contact-grid #contact-a .items .item-text-description,
+  #contact-grid #contact-a .specials .item-text-description,
+  #contact-grid #contact-b .process .item-text-description,
+  #contact-grid #contact-b .testimonials .item-text-description,
+  #contact-grid #contact-b .items .item-text-description,
+  #contact-grid #contact-b .specials .item-text-description,
+  #contact-grid #contact-c .process .item-text-description,
+  #contact-grid #contact-c .testimonials .item-text-description,
+  #contact-grid #contact-c .items .item-text-description,
+  #contact-grid #contact-c .specials .item-text-description,
+  #contact-grid #contact-d .process .item-text-description,
+  #contact-grid #contact-d .testimonials .item-text-description,
+  #contact-grid #contact-d .items .item-text-description,
+  #contact-grid #contact-d .specials .item-text-description {
+    font-size: medium;
+  }
+
+  #main-grid #home-a .process p,
+  #main-grid #home-a .testimonials p,
+  #main-grid #home-a .items p,
+  #main-grid #home-a .specials p,
+  #main-grid #home-b .process p,
+  #main-grid #home-b .testimonials p,
+  #main-grid #home-b .items p,
+  #main-grid #home-b .specials p,
+  #main-grid #home-c .process p,
+  #main-grid #home-c .testimonials p,
+  #main-grid #home-c .items p,
+  #main-grid #home-c .specials p,
+  #main-grid #home-d .process p,
+  #main-grid #home-d .testimonials p,
+  #main-grid #home-d .items p,
+  #main-grid #home-d .specials p,
+  #about-grid #about-a .process p,
+  #about-grid #about-a .testimonials p,
+  #about-grid #about-a .items p,
+  #about-grid #about-a .specials p,
+  #about-grid #about-b .process p,
+  #about-grid #about-b .testimonials p,
+  #about-grid #about-b .items p,
+  #about-grid #about-b .specials p,
+  #about-grid #about-c .process p,
+  #about-grid #about-c .testimonials p,
+  #about-grid #about-c .items p,
+  #about-grid #about-c .specials p,
+  #about-grid #about-d .process p,
+  #about-grid #about-d .testimonials p,
+  #about-grid #about-d .items p,
+  #about-grid #about-d .specials p,
+  #projects-grid #projects-a .process p,
+  #projects-grid #projects-a .testimonials p,
+  #projects-grid #projects-a .items p,
+  #projects-grid #projects-a .specials p,
+  #projects-grid #projects-b .process p,
+  #projects-grid #projects-b .testimonials p,
+  #projects-grid #projects-b .items p,
+  #projects-grid #projects-b .specials p,
+  #projects-grid #projects-c .process p,
+  #projects-grid #projects-c .testimonials p,
+  #projects-grid #projects-c .items p,
+  #projects-grid #projects-c .specials p,
+  #projects-grid #projects-d .process p,
+  #projects-grid #projects-d .testimonials p,
+  #projects-grid #projects-d .items p,
+  #projects-grid #projects-d .specials p,
+  #contact-grid #contact-a .process p,
+  #contact-grid #contact-a .testimonials p,
+  #contact-grid #contact-a .items p,
+  #contact-grid #contact-a .specials p,
+  #contact-grid #contact-b .process p,
+  #contact-grid #contact-b .testimonials p,
+  #contact-grid #contact-b .items p,
+  #contact-grid #contact-b .specials p,
+  #contact-grid #contact-c .process p,
+  #contact-grid #contact-c .testimonials p,
+  #contact-grid #contact-c .items p,
+  #contact-grid #contact-c .specials p,
+  #contact-grid #contact-d .process p,
+  #contact-grid #contact-d .testimonials p,
+  #contact-grid #contact-d .items p,
+  #contact-grid #contact-d .specials p {
+    font-size: medium;
+    height: 170px;
+  }
+
   #main-footer {
-    height: 7rem; }
-    #main-footer .footer-content {
-      flex-direction: column;
-      justify-content: space-around;
-      margin-top: 1rem; }
-    #main-footer .social {
-      padding: 1rem; } }
+    height: 7rem;
+  }
+
+  #main-footer .footer-content {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+
+  #main-footer .social {
+    padding: 1rem;
+  }
+}

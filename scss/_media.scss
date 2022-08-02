@@ -5,13 +5,16 @@
       font-size: medium;
     }
   }
+
   #about-d .testimonials p {
     font-size: x-large;
   }
+
   #projects-a .item-text {
     &-title {
       font-size: x-large;
     }
+
     &-category {
       font-size: large;
     }
@@ -29,11 +32,13 @@
       font-size: small;
     }
   }
+
   #projects-a .item-text {
     &-description {
       font-size: small;
     }
   }
+
   #about-grid #about {
 
     &-d .testimonials p {
@@ -54,25 +59,25 @@
 
   #main-grid #header-content {
     .header-content {
-      grid-template-columns: minmax(auto, auto) minmax(auto, auto) minmax(
-          auto,
-          auto
-        );
+      grid-template-columns: minmax(auto, auto) minmax(auto, auto) minmax(auto,
+          auto);
       grid-template-rows:
-        minmax(auto, auto) minmax(auto, auto) minmax(auto, auto)
-        minmax(auto, auto);
+        minmax(auto, auto) minmax(auto, auto) minmax(auto, auto) minmax(auto, auto);
     }
   }
+
   #main-grid #home-a .specials {
     grid-gap: 0rem;
   }
+
   #about-grid #about {
 
     &-d .testimonials {
       ul {
         font-size: large;
       }
-      p{
+
+      p {
         font-size: medium;
         height: 180px;
       }
@@ -83,41 +88,47 @@
         font-size: x-small;
       }
     }
-  }  
+  }
 
   #projects-a {
 
-   .item-text-title {
-    font-size: medium;
+    .item-text-title {
+      font-size: medium;
     }
+
     .item-text-category {
       font-size: smaller;
     }
-  }  
+
+  }
 }
 
 // Smartphones
 @media (max-width: 700px) {
 
-  
+
   #logo {
     align-items: center;
     justify-content: center;
   }
+
   #main-nav {
     flex-direction: column;
     align-items: center;
     padding: 0rem;
   }
+
   #main-grid #header-content {
     .header-content {
       grid-template-columns: 1fr minmax(300px, 300px) 1fr;
       grid-template-rows: 0.2fr 0.1fr minmax(300px, 300px) 0.75fr;
     }
+
     .grid-item {
       h1 {
         font-size: x-large;
       }
+
       p {
         font-size: medium;
       }
@@ -128,10 +139,16 @@
   #about-grid #about,
   #projects-grid #projects,
   #contact-grid #contact {
+
     &-a,
     &-b,
     &-c,
     &-d {
+      // .thesis {
+      //   grid-template-columns: repeat(1, 1fr);
+      //   grid-template-rows: repeat(7, 1fr)
+      // }
+
       .text-fields {
         grid-template-areas:
           "fullname"
@@ -142,23 +159,27 @@
           "message"
           "recaptcha";
       }
+
       .about-logos {
         grid-template-columns: repeat(1, 1fr);
       }
+
       .about-info {
-        grid-template-areas: "bio-image" "bio" "aw1" "aw2" "aw4";
+        grid-template-areas: "bio-image""bio""aw1""aw2""aw4";
         grid-gap: 3rem;
 
         .bio {
           border-right: none;
           border-bottom: 4px solid $main-color;
           border-radius: 10px;
+
           &-image {
             width: 40%;
             justify-self: center;
           }
         }
       }
+
       .process,
       .testimonials,
       .items,
@@ -169,6 +190,7 @@
           &-title {
             font-size: xx-large;
           }
+
           &-category {
             font-size: x-large;
           }
@@ -178,13 +200,14 @@
           }
         }
 
-        p{
+        p {
           font-size: medium;
           height: 170px;
         }
       }
     }
   }
+
   // Footer
   #main-footer {
     height: 7rem;
@@ -194,6 +217,7 @@
       justify-content: space-around;
       margin-top: 1rem;
     }
+
     .social {
       padding: 1rem;
     }
