@@ -65,9 +65,10 @@ img {
 #main-nav {
   display: flex;
   justify-content: space-around;
-  padding: 1rem;
+  padding: 1rem 0;
 
   #logo {
+
     h1,
     i {
       padding-bottom: 0.5rem;
@@ -77,9 +78,11 @@ img {
   ul {
     display: flex;
   }
+
   li {
     padding: 1rem 1rem;
   }
+
   a {
     text-decoration: none;
     color: #fff;
@@ -107,6 +110,7 @@ img {
     color: #fff;
     border-bottom: 5px solid $medium-color;
   }
+
   &-inner {
     background: $dark-color;
     border-bottom: 5px solid $medium-color;
@@ -116,12 +120,13 @@ img {
 // Home Page Grid
 #main-grid {
   display: grid;
-  grid-template-areas: "header-nav" "header-content" "home-a" "home-b" "footer";
+  grid-template-areas: "header-nav""header-content""home-a""home-b""footer";
   background-color: $bg-color;
 
   //Header
   #header-content {
     grid-area: header-content;
+
     .header-content {
       display: grid;
       grid-template-columns: 2fr 4fr 2fr;
@@ -200,6 +205,7 @@ img {
     &-b {
       grid-area: home-b;
       background-color: $light-color;
+
       .process {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -255,7 +261,8 @@ img {
 // Home Page Grid
 #about-grid {
   display: grid;
-  grid-template-areas: "header-nav" "about-a" "about-b" "about-c" "about-d" "footer";
+  grid-template-areas: "header-nav""about-a""about-b""about-c""about-d""footer";
+
   // Section A: Bio
   #about {
     &-a {
@@ -291,9 +298,11 @@ img {
       .award-1 {
         grid-area: aw1;
       }
+
       .award-2 {
         grid-area: aw2;
       }
+
       // .award-3 {
       // }
       .award-4 {
@@ -403,12 +412,13 @@ img {
 // Contact Page
 #contact-grid {
   display: grid;
-  grid-template-areas: "header-nav" "contact-a" "footer";
+  grid-template-areas: "header-nav""contact-a""footer";
   margin: auto 0;
 
   #contact {
     &-a {
       grid-area: contact-a;
+
       .text-fields {
         display: grid;
         grid-template-areas:
@@ -428,26 +438,32 @@ img {
           grid-area: fullname;
           border-radius: 5px;
         }
+
         .subject-input {
           grid-area: subject;
           border-radius: 5px;
         }
+
         .email-input {
           grid-area: email;
           border-radius: 5px;
         }
+
         .phone-input {
           grid-area: phone;
           border-radius: 5px;
         }
+
         .message-input {
           grid-area: message;
           height: 150px;
           border-radius: 5px;
         }
+
         .text-input {
           padding: 0.5rem 1rem;
         }
+
         .recaptcha {
           grid-area: recaptcha;
           margin: 0 auto;
