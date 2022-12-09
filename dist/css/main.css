@@ -122,7 +122,10 @@ input[class^="btn-"]:hover {
       border: silver solid 3px; }
       #projects-grid #projects-a .item-text-wrap {
         display: grid;
-        grid-template-areas: "title title" "tech-used tech-used" "description description" "code-btn video-btn"; }
+        grid-template-areas: "title title"
+ "tech-used tech-used"
+ "description description"
+ "code-btn video-btn"; }
         #projects-grid #projects-a .item-text-wrap button[type="button"] {
           width: 75%;
           border-radius: 20px;
@@ -369,7 +372,8 @@ img {
     grid-area: about-a; }
     #about-grid #about-a .about-info {
       display: grid;
-      grid-template-areas: "bio bio bio-image" "aw1 aw2 aw4";
+      grid-template-areas: "bio bio bio-image"
+ "aw1 aw2 aw4";
       grid-gap: 1.2rem; }
     #about-grid #about-a .bio-image {
       grid-area: bio-image;
@@ -414,7 +418,7 @@ img {
     border-top: 5px solid silver; }
     #about-grid #about-c .about-logos {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-gap: 2rem; }
       #about-grid #about-c .about-logos img {
         width: 70px;
@@ -460,7 +464,10 @@ img {
     grid-area: contact-a; }
     #contact-grid #contact-a .text-fields {
       display: grid;
-      grid-template-areas: "fullname email" "subject phone" "message message" "recaptcha recaptcha";
+      grid-template-areas: "fullname email"
+ "subject phone"
+ "message message"
+ "recaptcha recaptcha";
       grid-gap: 1.2rem;
       padding: 1rem;
       margin-bottom: 1.2rem;
@@ -592,7 +599,13 @@ img {
   #contact-grid #contact-b .text-fields,
   #contact-grid #contact-c .text-fields,
   #contact-grid #contact-d .text-fields {
-    grid-template-areas: "fullname" "email" "subject" "phone" "message" "message" "recaptcha"; }
+    grid-template-areas: "fullname"
+ "email"
+ "subject"
+ "phone"
+ "message"
+ "message"
+ "recaptcha"; }
   #main-grid #home-a .about-logos, #main-grid #home-b .about-logos, #main-grid #home-c .about-logos, #main-grid #home-d .about-logos,
   #about-grid #about-a .about-logos,
   #about-grid #about-b .about-logos,
